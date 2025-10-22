@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(215, 207, 155);
+}
+p{
+    background-color: rgb(103, 205, 220);
+}
+.box{
+    background-color: rgb(226, 141, 227);
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#two{
+    border: 2px black;
+}
+#three{
+    padding: 2px;
+    margin-top: 20px;
+}
+#three p{
+    background-color: rgb(137, 228, 137);
+}
+#two p{
+    display: inline;
+}
+
+#four p{
+    display: inline;
+}
+#five{
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+}
+.column{
+    width: 29vw;
+    height: 50px;
+   display: inline-block;
+   background-color: aqua;
+}
+.column:hover{
+    background-color: pink;
+}
+p:hover{
+    font-style:normal;
+}
+p:first-child {
+    font-weight: bold;
+}

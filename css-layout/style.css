@@ -1,0 +1,46 @@
+body{
+    background-color: cadetblue;
+}
+.box{
+    width: 300px;
+    /* height: 100px; */
+    outline: 2px solid wheat;
+    margin: 20px;
+    padding: 10px;
+    background-color: lightblue;
+}
+#one{
+visibility: visible;
+position: relative;
+top: 0px;
+left: 20px;
+}
+#one span{
+    position: relative;
+    top: -6px;
+    left: 2px;
+}
+#two{
+    position: absolute;
+    top: 0px;
+    left: 1900px;
+}
+#three{
+position: fixed;
+bottom: 0px;
+right: 0px;
+}
+#four{
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+#five{
+    height: 800px;
+}
+/* #one:hover{
+visibility: hidden;
+} */
+/* #two:active{
+    background-color: red;
+} */

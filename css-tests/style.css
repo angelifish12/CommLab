@@ -1,0 +1,32 @@
+body{
+    background-color: aqua;
+}
+#main-wrapper{
+    width: 100%;
+    max-width: 900px;
+    height: 100px;
+    background-color: pink;
+    margin: auto;
+}
+#headline-wrapper{
+    height: 50px;
+    width: 100%;
+    background-color: aliceblue;
+}
+#headline-wrapper h1{
+    text-align: center;
+}
+.nav-item{
+    background-color: rgb(185, 104, 205);
+    width: 24%;
+    height: 50px;
+    display: inline-block;
+}
+.nav-item p{
+    color: firebrick;
+    text-align: center;
+}
+#nav-wrapper{
+    text-align: center;
+    outline: w;
+}

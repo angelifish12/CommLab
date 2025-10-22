@@ -1,0 +1,342 @@
+body {
+    background-color: white;
+}
+
+#main-wrapper {
+    width: 100%;
+    max-width: 900px;
+    height: 1000px;
+    background-color: white;
+    margin: auto;
+}
+
+#headline-wrapper {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(164, 153, 154);
+}
+
+#headline-wrapper h1 {
+    text-align: center;
+}
+
+.nav-cate {
+    background-color: rgb(251, 242, 228);
+    display: inline-block;
+    padding: 9px 0px 12px;
+    font: 14px;
+    width: 104px;
+    height: 43px;
+    color: rgb(25, 33, 7);
+    border-radius: 5px;
+}
+
+.nav-item {
+    padding: 12px;
+    background-color: white;
+    width: 62px;
+    height: 33px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.nav-item p {
+    color: firebrick;
+    text-align: center;
+}
+
+#nav-wrapper {
+    text-align: center;
+    outline: w;
+    background-color: rgb(255, 186, 117);
+}
+
+#dog-wrapper {
+    text-align: center;
+    outline: w;
+}
+
+.dog-item {
+    background-color: rgb(254, 241, 242);
+    width: 30%;
+    height: 200px;
+    padding: 20px 2px;
+    display: inline-block;
+    color: red;
+    font-size: 11px;
+    position: relative;
+
+}
+
+.dog-item2 {
+    background-color: rgb(254, 241, 242);
+    width: 30%;
+    height: 200px;
+    padding: 2px;
+    display: inline-block;
+    color: red;
+    font-size: 11px;
+}
+
+.dog-item3 {
+    background-color: rgb(240, 255, 255);
+    width: 30%;
+    height: 200px;
+    padding: 2px;
+    display: inline-block;
+    color: red;
+    font-size: 11px;
+}
+
+.dog-price {
+    /* width: 30%;
+    height: 15px;
+    padding: 2px;
+    display: inline-block; */
+    background-color: pink;
+    font: bold;
+    color: white;
+}
+
+.title-item {
+    background-color: rgb(254, 241, 242);
+    margin-left: 5px;
+    margin-right: 1px;
+    color: red;
+}
+
+#blue {
+    background-color: rgb(240, 255, 255);
+}
+
+#dark {
+    background-color: rgb(105, 177, 253);
+}
+
+.nav-cate:active {
+    background-color: rgb(255, 186, 117);
+}
+
+.logo-item img {
+    width: 224px;
+    height: 120px;
+    text-align: center;
+
+}
+
+.gender {
+    text-align: right;
+    margin: 4px 0px 0px;
+    position: absolute;
+    top: 5px;
+    right: 9px;
+}
+
+.search-bar {
+    background-color: rgb(48, 148, 173);
+    width: 30%;
+    outline: 5px;
+    outline-color: bisque;
+    font: 14px;
+    margin: 0px 309.5px;
+    padding: 1px;
+}
+
+#dog img {
+    background-color: rgb(48, 148, 173);
+    width: 45px;
+    height: 28px;
+    text-align: left;
+}
+
+#search img {
+    background-color: rgb(48, 148, 173);
+    width: 45px;
+    height: 28px;
+    text-align: right;
+}
+
+.scroll {
+    width: 122.28px;
+    height: 23px;
+    color: rgb(255, 114, 11);
+    background-color: white;
+    font: 14px;
+    margin: 20px;
+    padding: 5px 25px 15px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.frieren {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    text-align: center;
+}
+
+.frieren img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    text-align: center;
+}
+
+.poodle {
+    color: black;
+    position: absolute;
+    bottom: 92px;
+    left: 96px;
+    font: bold;
+    font-size: 14.2px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.txt {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.txt h1 {
+    text-align: center;
+}
+
+.cool {
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    display: inline-block;
+}
+
+.h7 {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+
+}
+
+.question {
+    position: absolute;
+    bottom: 310px;
+    left: 210px;
+    transform: rotate(-65deg);
+    width: 130px;
+    height: auto;
+    z-index: 1;
+}
+
+.psycho {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+.psycho h1{
+    text-align: center;
+}
+.cute {
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    display: inline-block;
+}
+
+.m10 {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+
+}
+
+.new {
+    position: absolute;
+    bottom: 433px;
+    right: 190px;
+    width: 75px;
+    height: auto;
+    z-index: 1;
+}
+
+.adv {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+.adv h1{
+    text-align: center;
+}
+.jo {
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    display: inline-block;
+}
+
+.j13 {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+
+}
+
+.black {
+    position: absolute;
+    bottom: 712px;
+    transform: rotate(5deg);
+    right: 130px;
+    width: 420px;
+    height: auto;
+    z-index: 1;
+}
+
+.mix {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.diary {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.attack {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.chihuahua {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.danger {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.hint{
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:weight;
+  font-style:normal;
+  font-size: 50px;
+  color: aliceblue;
+}
