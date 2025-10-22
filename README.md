@@ -4,12 +4,19 @@
 
 **below u can see my projects:**
 
-SEE MY RENDERED WORK [HERE](https://angelifish12.github.io/CommLab/)
+SEE MY RENDERED WORK
 
-here is a link to my
+ [HERE](https://github.com/angelifish12/CommLab)
+
+**here is a link to my**
 ![fark](petweb.png)
 * [Shanzhai web project](pet-website)
 
 * [study abroad in Paris project](scroll-rec)
 
 * [ first website](my-first-website)
+
+⠀⢀⠤⡀⡀⣴⣶⣤⣶⣦⠀
+⠀⢸⠀⠀⠀⠻⠿⠛⠿⠟⠀
+⢐⣺⠀⡄⠀⠀⠀✮⠀⣗⡂
+⠀⠘⢄⡀⠀⠛⠀⢀⡠⠃ 
