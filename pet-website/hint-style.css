@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style:normal;
+}
+.text-animation{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 70px;
+}
+.text-animation .static-text,
+.text-animation .dynamic-text{
+    display: inline-flex;
+    flex-direction: column;
+}
+.static-text{
+    color: aliceblue;
+}
+.dynamic-text{
+    height: 70px;
+    overflow: hidden;
+}
+
+.text{
+    position: relative;
+    animation: animate 15s steps(5) infinite;
+}
+@keyframes animate{
+    0%{
+        top: 0%;
+    }
+    100%{
+        top: -350px;
+    }
+}
+.text span{
+    color: var(--color);
+    position: relative;
+}
+
+.text span::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+height: 100%;
+background: rgb(156, 94, 219);
+border-left: 5px solid var(--color);
+animation: animate1 3s steps(10) infinite;
+}
+
+@keyframes animate1{
+    40%, 60%{
+        left: calc(95% + 16px);
+    }
+    100%{
+        left: 0;
+    }
+}

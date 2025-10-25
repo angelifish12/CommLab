@@ -296,11 +296,35 @@ body {
     height: auto;
     z-index: 1;
 }
-
 .mix {
     color: white;
     margin: 0px;
     padding: 0px;
+}
+.mix h1{
+    text-align: center;
+}
+.na {
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    display: inline-block;
+}
+
+.n15 {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+
+}
+.chihua {
+    position: absolute;
+    bottom: 732px;
+    left: 480px;
+    width: 190px;
+    height: auto;
+    z-index: 1;
 }
 
 .diary {
@@ -308,17 +332,104 @@ body {
     margin: 0px;
     padding: 0px;
 }
+.diary h1{
+    text-align: center;
+}
+.al {
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    display: inline-block;
+}
+
+.a18 {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+
+}
+.apo {
+    position: absolute;
+    bottom: 102px;
+        transform: rotate(15deg);
+    left: 135px;
+    width: 100px;
+    height: auto;
+    z-index: 1;
+}
 
 .attack {
     color: white;
     margin: 0px;
     padding: 0px;
 }
+.attack h1{
+    text-align: center;
+}
+.titan {
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    display: inline-block;
+}
+
+.a20 {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+
+}
+.attackk {
+    position: absolute;
+    bottom: 502px;
+        transform: rotate(25deg);
+    left: 535px;
+    width: 250px;
+    height: auto;
+    z-index: 1;
+}
 
 .chihuahua {
     color: white;
     margin: 0px;
     padding: 0px;
+}
+.chihuahua h1{
+    text-align: center;
+}
+.ctct {
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    display: inline-block;
+}
+
+.d23 {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+
+}
+.slay {
+    position: absolute;
+    top: 22px;
+        transform: rotate(25deg);
+    left: 345px;
+    width: 210px;
+    height: auto;
+    z-index: 1;
+}
+.slayy {
+    position: absolute;
+    bottom: -2320px;
+        transform: rotate(-15deg);
+    left: -50px;
+    width: 280px;
+    height: auto;
+    z-index: 1;
 }
 
 .danger {
@@ -332,11 +443,12 @@ a {
     text-decoration: none;
 }
 
-.hint{
+/* .hint{
   font-family: "Pixelify Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight:weight;
   font-style:normal;
   font-size: 50px;
   color: aliceblue;
-}
+} */
+

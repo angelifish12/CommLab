@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Text Animation</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="hint-style.css">
+
     <style>
         body {
             background-color: rgb(140, 90, 39);
@@ -14,18 +16,33 @@
 </head>
 
 <body>
-    <div class="hint">
+    <!-- <div class="hint">
         <p>hint: this isn't a normal pet site, and that “search” isn't a button. 
            <br> this is a trapped 2D realm. 
           <br>  to escape, click every new name and face you meet—each one opens a fresh world. 
           <br>  good luck, traveler.
         </p>
-        <a href="index.html"><button>understood!</button>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
+   
+    </div> -->
+    <div class="text-animation">
+            <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
-                rel="stylesheet">
+                rel="stylesheet"> -->
+        <div class="static-text">this isn't a normal pet site</div>
+        <div class="dynamic-text">
+                        <div class="text"><span style="--color: red;">, and that “search” isn't a button.</span></div>
+
+            <div class="text"><span style="--color: rgb(236, 202, 239);">this is a trapped 2D realm.</span></div>
+                        <div class="text"><span style="--color: rgb(209, 225, 66);">to escape,</span></div>
+                      <div class="text"><span style="--color: rgb(225, 66, 196);">click every new name and face you meet</span></div>
+            <div class="text"><span style="--color: rgb(0, 255, 51);">—each one opens a fresh  world.</span></div>
+            <div class="text"><span style="--color: rgb(32, 73, 79);">good luck, traveler.</span></div>
+
+        </div>
+
     </div>
+    <a href="index.html"><button>understood!</button>
 </body>
 
 </html>

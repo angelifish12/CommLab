@@ -4,9 +4,7 @@
 
 **below u can see my projects:**
 
-SEE MY RENDERED WORK
-
- [HERE](https://github.com/angelifish12/CommLab)
+SEE MY RENDERED WORK [HERE](https://github.com/angelifish12/CommLab)
 
 **here is a link to my**
 ![fark](petweb.png)
