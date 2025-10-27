@@ -21,3 +21,5 @@ SEE MY RENDERED WORK [HERE](https://github.com/angelifish12/CommLab)
 ⢐⣺⠀⡄⠀⠀⠀✮⠀⣗⡂
 
 ⠀⠘⢄⡀⠀⠛⠀⢀⡠⠃ 
+
+<!-- all the images can be found on https://www.higopet.com/ -->
