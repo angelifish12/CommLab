@@ -1,69 +1,113 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style:normal;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
-.text-animation{
+
+.text-animation {
     font-size: 50px;
     font-weight: bold;
     line-height: 70px;
+    padding-left: 12px;
 }
+
 .text-animation .static-text,
-.text-animation .dynamic-text{
+.text-animation .dynamic-text {
     display: inline-flex;
     flex-direction: column;
 }
-.static-text{
+
+.static-text {
     color: aliceblue;
+    white-space: nowrap;
 }
-.dynamic-text{
+
+.dynamic-text {
     height: 70px;
     overflow: hidden;
+    position: relative;
 }
 
-.text{
+.dynamic-text .lines {
     position: relative;
-    animation: animate 15s steps(5) infinite;
+    will-change: transform;
+    animation: slide 18s steps(6, end) infinite;
 }
-@keyframes animate{
-    0%{
-        top: 0%;
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
     }
-    100%{
-        top: -350px;
+
+    16.67% {
+        transform: translateY(-70px);
+    }
+
+    33.33% {
+        transform: translateY(-140px);
+    }
+
+    50% {
+        transform: translateY(-210px);
+    }
+
+    66.67% {
+        transform: translateY(-280px);
+    }
+
+    83.33% {
+        transform: translateY(-350px);
+    }
+
+    100% {
+        transform: translateY(-420px);
     }
 }
-.text span{
+
+.text {
+    height: 70px;
+    line-height: 70px;
+    display: block;
+    overflow: visible;
+}
+
+.text span {
     color: var(--color);
     position: relative;
+    white-space: nowrap;
+    padding-right: 12px;
 }
 
-.text span::after{
+.text span::after {
     content: "";
     position: absolute;
-    top: 2px;
+    top: 0;
     left: 0;
     width: 100%;
-height: 100%;
-background: rgb(156, 94, 219);
-border-left: 5px solid var(--color);
-animation: animate1 3s steps(10) infinite;
+    height: 100%;
+    background: rgb(140, 90, 39);
+    border-left: 5px solid var(--color);
+    animation: type 3s steps(20, end) infinite;
 }
 
-@keyframes animate1{
-    40%, 60%{
-        left: calc(95% + 16px);
+@keyframes type {
+
+    40%,
+    60% {
+        left: calc(100% + 16px);
     }
-    100%{
+
+    100% {
         left: 0;
     }
 }

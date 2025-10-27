@@ -1,13 +1,19 @@
 body {
-    background-color: white;
+
+    background: repeating-linear-gradient(90deg,
+            #f0f0f0 0px,
+            #f0f0f0 5px,
+            #ffffff 5px,
+            #ffffff 10px);
 }
 
 #main-wrapper {
     width: 100%;
     max-width: 900px;
-    height: 1000px;
+    min-height: 1000px;
     background-color: white;
     margin: auto;
+    padding-top: -100px;
 }
 
 #headline-wrapper {
@@ -43,6 +49,11 @@ body {
 .nav-item p {
     color: firebrick;
     text-align: center;
+}
+
+.nav-item.active {
+    height: 60px;
+    padding-bottom: 25px;
 }
 
 #nav-wrapper {
@@ -117,10 +128,15 @@ body {
     background-color: rgb(255, 186, 117);
 }
 
+.logo-item {
+    text-align: center;
+}
+
 .logo-item img {
     width: 224px;
     height: 120px;
-    text-align: center;
+    display: block;
+    margin: 0 auto;
 
 }
 
@@ -134,98 +150,216 @@ body {
 
 .search-bar {
     background-color: rgb(48, 148, 173);
-    width: 30%;
+    width: 281px;
     outline: 5px;
     outline-color: bisque;
-    font: 14px;
-    margin: 0px 309.5px;
+    /* font: 14px; */
+    margin: 0 auto;
     padding: 1px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+#type {
+    flex-grow: 1;
+    border: none;
+    padding: 5px;
 }
 
 #dog img {
     background-color: rgb(48, 148, 173);
     width: 45px;
     height: 28px;
-    text-align: left;
+    /* text-align: left; */
+}
+
+.logo-item,
+.search-bar {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #search img {
     background-color: rgb(48, 148, 173);
     width: 45px;
     height: 28px;
-    text-align: right;
+    /* text-align: right; */
 }
 
 .scroll {
-    width: 122.28px;
-    height: 23px;
+    width: 82px;
+    height: auto;
     color: rgb(255, 114, 11);
     background-color: white;
-    font: 14px;
-    margin: 20px;
-    padding: 5px 25px 15px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+    margin: 20px auto;
+    padding: 10px 25px;
+    position: relative;
+    display: block;
 }
 
-.frieren {
+.scroll p {
+    margin: 0;
+}
+
+.dog-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.box-content {
+    transition: opacity 0.3s ease;
+}
+
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 173, 100, 0.7);
     color: white;
-    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dog-item:hover .box-content {
+    opacity: 0.3;
+}
+
+.dog-item:hover .hover-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.frieren {
+    color: rgb(81, 212, 212);
+    margin: 0 auto;
     padding: 0px;
     position: relative;
     text-align: center;
+    max-width: 900px;
 }
+
+#frieren-character {
+    position: absolute;
+    top: 150px;
+    right: -200px;
+    margin: 0;
+}
+
+.character {
+    float: right;
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    margin: 0 0 20px 20px;
+    border: 2px solid aqua;
+    background-color: rgba(0, 200, 200, 0.1);
+}
+
+.character p {
+    color: rgb(139, 58, 161);
+    margin: 10px 0;
+}
+
+.character h2 {
+    color: blue;
+    margin: 0 0 10px 0;
+}
+
+.character mark {
+    background-color: aqua;
+}
+
+.character img {
+    width: 100%;
+    height: auto;
+    display: block
+}
+
 
 .frieren img {
     max-width: 90%;
     height: auto;
     display: block;
-    text-align: center;
+    margin: 0 auto;
+    /* text-align: center; */
 }
 
 .poodle {
     color: black;
     position: absolute;
     bottom: 92px;
-    left: 96px;
+    left: 184px;
     font: bold;
-    font-size: 14.2px;
+    font-size: 13.5px;
     font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
+    /* font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal; */
 }
 
 .txt {
-    color: white;
-    margin: 0px;
-    padding: 0px;
+    color: rgb(24, 87, 34);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+    position: relative;
+}
+
+.txt::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#txt-character {
+    position: absolute;
+    top: 150px;
+    right: -200px;
+    margin: 0;
 }
 
 .txt h1 {
     text-align: center;
 }
 
+.txt img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .cool {
     position: relative;
-    top: 0px;
-    bottom: 0px;
-    display: inline-block;
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
 }
 
 .h7 {
-    position: relative;
+    width: 100%;
+    height: auto;
     display: block;
-    top: 0;
-    left: 0;
-
 }
 
 .question {
     position: absolute;
-    bottom: 310px;
-    left: 210px;
+    bottom: 315px;
+    left: 234px;
     transform: rotate(-65deg);
     width: 130px;
     height: auto;
@@ -233,209 +367,323 @@ body {
 }
 
 .psycho {
-    color: white;
-    margin: 0px;
-    padding: 0px;
+    color: rgb(94, 39, 93);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+    position: relative;
 }
-.psycho h1{
+
+.psycho img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#psycho-character {
+    position: absolute;
+    top: 150px;
+    right: -200px;
+    margin: 0;
+}
+
+.psycho::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.psycho h1 {
     text-align: center;
 }
+
 .cute {
     position: relative;
-    top: 0px;
-    bottom: 0px;
-    display: inline-block;
+    display: block;
+    margin: 20px auto;
+    display: block;
 }
 
 .m10 {
-    position: relative;
+    width: 100%;
+    height: auto;
     display: block;
-    top: 0;
-    left: 0;
 
 }
 
 .new {
     position: absolute;
-    bottom: 433px;
-    right: 190px;
+    bottom: 489px;
+    right: 260px;
     width: 75px;
     height: auto;
     z-index: 1;
 }
 
 .adv {
-    color: white;
-    margin: 0px;
-    padding: 0px;
+    color: rgb(47, 132, 65);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+    position: relative;
 }
-.adv h1{
+
+.adv h1 {
     text-align: center;
 }
+
+.adv img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .jo {
     position: relative;
-    top: 0px;
-    bottom: 0px;
-    display: inline-block;
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
 }
 
 .j13 {
-    position: relative;
+    width: 100%;
+    height: auto;
     display: block;
-    top: 0;
-    left: 0;
-
 }
 
 .black {
     position: absolute;
-    bottom: 712px;
+    bottom: 725px;
+    right: 203px;
     transform: rotate(5deg);
-    right: 130px;
     width: 420px;
     height: auto;
     z-index: 1;
 }
-.mix {
-    color: white;
-    margin: 0px;
-    padding: 0px;
+
+#jojo-character {
+    position: absolute;
+    top: 150px;
+    right: -200px;
+    margin: 0;
 }
-.mix h1{
+
+.mix {
+    color: rgb(143, 20, 20);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+    position: relative;
+}
+
+.mix h1 {
     text-align: center;
 }
+
+.mix img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .na {
     position: relative;
-    top: 0px;
-    bottom: 0px;
-    display: inline-block;
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
 }
 
 .n15 {
-    position: relative;
+    width: 100%;
+    height: auto;
     display: block;
-    top: 0;
-    left: 0;
-
 }
+
 .chihua {
     position: absolute;
-    bottom: 732px;
-    left: 480px;
+    bottom: 735px;
+    left: 515px;
     width: 190px;
     height: auto;
     z-index: 1;
 }
 
-.diary {
-    color: white;
-    margin: 0px;
-    padding: 0px;
+#mix-character {
+    position: absolute;
+    top: 150px;
+    right: -200px;
+    margin: 0;
 }
-.diary h1{
+
+.diary {
+    color: rgb(210, 144, 73);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+    position: relative;
+}
+
+.diary h1 {
     text-align: center;
 }
+
+.diary img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .al {
     position: relative;
-    top: 0px;
-    bottom: 0px;
-    display: inline-block;
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
 }
 
 .a18 {
-    position: relative;
+    width: 100%;
+    height: auto;
     display: block;
-    top: 0;
-    left: 0;
-
 }
+
 .apo {
     position: absolute;
-    bottom: 102px;
-        transform: rotate(15deg);
-    left: 135px;
+    bottom: 10%;
+    left: 175px;
+    transform: rotate(15deg);
     width: 100px;
     height: auto;
     z-index: 1;
 }
 
-.attack {
-    color: white;
-    margin: 0px;
-    padding: 0px;
+#diary-character {
+    position: absolute;
+    top: 150px;
+    right: -200px;
+    margin: 0;
 }
-.attack h1{
+
+.attack {
+    color: rgb(213, 111, 152);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+    position: relative;
+}
+
+.attack h1 {
     text-align: center;
 }
+
+.attack img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .titan {
     position: relative;
-    top: 0px;
-    bottom: 0px;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+    max-width: 810px;
 }
 
 .a20 {
-    position: relative;
+    max-width: 100%;
+    height: auto;
     display: block;
-    top: 0;
-    left: 0;
-
+    margin: 0 auto;
 }
+
 .attackk {
     position: absolute;
-    bottom: 502px;
-        transform: rotate(25deg);
-    left: 535px;
+    bottom: 500px;
+    left: 579px;
+    transform: rotate(25deg);
     width: 250px;
     height: auto;
     z-index: 1;
 }
 
-.chihuahua {
-    color: white;
-    margin: 0px;
-    padding: 0px;
+
+
+#attack-character {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    margin: 0;
 }
-.chihuahua h1{
+
+.chihuahua {
+    color: rgb(29, 34, 80);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+    position: relative;
+}
+
+.chihuahua h1 {
     text-align: center;
 }
+
+.chihuahua img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .ctct {
     position: relative;
-    top: 0px;
-    bottom: 0px;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+    max-width: 810px;
 }
 
 .d23 {
-    position: relative;
+    max-width: 100%;
+    height: auto;
     display: block;
-    top: 0;
-    left: 0;
-
+    margin: 0 auto;
 }
+
 .slay {
     position: absolute;
     top: 22px;
-        transform: rotate(25deg);
-    left: 345px;
+    left: 388px;
+    transform: rotate(25deg);
     width: 210px;
     height: auto;
     z-index: 1;
 }
+
 .slayy {
     position: absolute;
-    bottom: -2320px;
-        transform: rotate(-15deg);
-    left: -50px;
+    bottom: -256%;
+    left: -5%;
+    transform: rotate(-15deg);
     width: 280px;
     height: auto;
     z-index: 1;
 }
 
+#chihuahua-character {
+    position: absolute;
+    top: 150px;
+    right: -200px;
+    margin: 0;
+}
+
 .danger {
-    color: white;
+    color: rgb(116, 27, 118);
     margin: 0px;
     padding: 0px;
+    text-align: center;
 }
 
 a {
@@ -451,4 +699,23 @@ a {
   font-size: 50px;
   color: aliceblue;
 } */
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: rgb(250, 202, 154);
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: rgb(141, 71, 1);
+    font-weight: bold;
+    font-size: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 2px solid rgb(194, 142, 90);
+}
 
+.home-button:hover {
+    background-color: rgb(234, 195, 153);
+    transform: scale(1.1);
+}

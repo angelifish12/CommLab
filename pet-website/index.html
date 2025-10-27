@@ -9,18 +9,18 @@
 </head>
 
 <body>
+
+    <div class="home-item"></div>
+    <div class="logo-item">
+        <a href="https://youtu.be/Ct6BUPvE2sM?si=8KL2Iax5e-g5CRKT"><img src="assets/logo.png" alt=""></a>
+    </div>
+    <div class="search-bar">
+        <img id="dog" src="assets/searchdog.png">
+        <input type="text" name="" id="type">
+        <a href="hint.html"><img id="search" src="assets/searchbtn.png"></a>
+    </div>
     <div id="main-wrapper">
-        <div class="home-item"></div>
-        <div class="logo-item">
-            <img src="assets/logo.png" alt="">
-        </div>
-        <div class="search-bar">
-            <img id="dog" src="assets/searchdog.png">
-            <input type="text" name="" id="type">
-            <a href="hint.html"><img id="search" src="assets/searchbtn.png"></a>
-        </div>
-        <div id="headline-wrapper">
-        </div>
+        <div id="headline-wrapper"></div>
         <div id="nav-wrapper">
             <div class="nav-cate" id="first">
                 <p>新着ペット</p>
@@ -32,91 +32,188 @@
                 <p>人気のペット</p>
             </div>
             <br>
-            <div class="nav-item">
-                <p><img src="assets/dog.png" alt=""></a></p>
+            <div class="nav-item active">
+                <a href="index.html">
+                    <p><img src="assets/dog.png" alt=""></p>
+                </a>
             </div>
             <div class="nav-item">
-                <p><img src="assets/cat.png" alt=""></p>
+                <a href="cat.html">
+                    <p><img src="assets/cat.png" alt=""></p>
+                </a>
             </div>
             <div class="nav-item">
-                <p><img src="assets/aqua.png" alt=""></p>
+                <a href="hint.html">
+                    <p><img src="assets/aqua.png" alt=""></p>
+                </a>
             </div>
             <div class="nav-item">
-                <p><img src="assets/bird.png" alt=""></p>
+                <a href="hint.html">
+                    <p><img src="assets/bird.png" alt=""></p>
+                </a>
             </div>
             <div class="nav-item">
-                <p><img src="assets/rep.png" alt=""></p>
+                <a href="hint.html">
+                    <p><img src="assets/rep.png" alt=""></p>
+                </a>
             </div>
             <div class="title-item">
-                <h1 style=font-size:16px>れんちゃん</h1>
+                <h1 style="font-size:16px">れんちゃん</h1>
             </div>
         </div>
 
         <div id="dog-wrapper">
-            <div class="dog-item">
-                <a href="chapter1.html"><img src="assets/1.jpg"></a>
-
-                <img class="gender girl" src="assets/girl.png">
-                <p>トイプードル</p>
-                <p class="dog-price">508,000円</p>
-            </div>
-
-            <div class="dog-item"> <a href="chapter2.html"><img src="assets/2.jpg"></a>
-                <img class="gender girl" src="assets/girl.png">
-                <p>トイプードル</p>
-                <p class="dog-price">208,000円</p>
-            </div>
-
-            <div class="dog-item">
-                <a href="chapter3.html"><img src="assets/3.jpg"></a>
-                <img class="gender girl" src="assets/girl.png">
-                <p>トイプードル</p>
-                <p class="dog-price">198,000円</p>
-            </div>
-            <div class="dog-item">
-                <a href="chapter4.html"><img src="assets/4.jpg"></a>
-                <img class="gender girl" src="assets/girl.png">
-                <p>トイプードル</p>
-                <p class="dog-price">188,000円</p>
-            </div>
-            <div class="dog-item">
-                <a href="chapter5.html"><img src="assets/5.jpg"></a>
-                <img class="gender girl" src="assets/girl.png">
-                <p>ミックス</p>
-                <p class="dog-price">238,000円</p>
-            </div>
-            <div class="dog-item" id="blue">
-                <a href="chapter6.html"><img src="assets/6.jpg"></a>
-                <img class="gender boy" src="assets/boy.png">
-                <p>ロング コート</p>
-                <p class="dog-price" id="dark">258,000円</p>
-            </div>
-            <div class="dog-item">
-                <a href="chapter7.html"><img src="assets/7.jpg"></a>
-                <img class="gender girl" src="assets/girl.png">
-                <p>ミックス</p>
-                <p class="dog-price">438,000円</p>
-            </div>
-            <div class="dog-item" id="blue">
-                <a href="chapter8.html"><img src="assets/8.jpg"></a>
-                <img class="gender boy" src="assets/boy.png">
-                <p>ロングコート・チワワ</p>
-                <p class="dog-price" id="dark">228,000円</p>
-            </div>
-            <div class="dog-item" id="blue">
-                <a href="chapter9.html"><img src="assets/9.jpg"></a>
-                <img class="gender boy" src="assets/boy.png">
-                <p>シーズー</p>
-                <p class="dog-price" id="dark">218,000円</p>
-            </div>
+            <a href="chapter1.html">
+                <div class="dog-item">
+                    <div nav-item active>
+                    </div>
+                    <div class="box-content">
+                        <img src="assets/1.jpg">
+                        <img class="gender girl" src="assets/girl.png">
+                        <p>トイプードル</p>
+                        <p class="dog-price">508,000円</p>
+                    </div>
+                    <div class="hover-text">Name: Ftoypoodlen
+                        <br>The elf mage Ftoypoodlen and her hero party have defeated the Demon King. As an
+                        immortal elf, Ftoypoodlen perceives time differently from her dog companions, leading her to
+                        regret not getting to know them better after the hero Htoypoodler dies decades later.
+                    </div>
+                </div>
+            </a>
+            <a href="chapter2.html">
+                <div class="dog-item">
+                    <div class="box-content">
+                        <img src="assets/2.jpg">
+                        <img class="gender girl" src="assets/girl.png">
+                        <p>トイプードル</p>
+                        <p class="dog-price">208,000円</p>
+                    </div>
+                    <div class="hover-text">Name: Htoypoodler
+                        <br>A puppy named Htoypoodler who wants to become a Hunter, a licensed professional with
+                        extraordinary abilities, in order to find his father, Dchihuahuan. Along the way, she befriends
+                        other aspiring Hunters. The series is an adventure that features challenging arcs, unique power
+                        systems, and a deconstruction of typical shonen tropes.
+                    </div>
+                </div>
+            </a>
+            <a href="chapter3.html">
+                <div class="dog-item">
+                    <div class="box-content">
+                        <img src="assets/3.jpg">
+                        <img class="gender girl" src="assets/girl.png">
+                        <p>トイプードル</p>
+                        <p class="dog-price">198,000円</p>
+                    </div>
+                    <div class="hover-text">Name: Mtoypoodleb
+                        <br>Mtoypoodleb is a shy middle schooler with immense psychic powers who tries to live a normal
+                        life and suppress her abilities. She works for a con-dog named Htoypoodler, who hires
+                        Mtoypoodleb to work at her "spirit medium" business while teaching Mtoypoodleb that her powers
+                        don't define her and that she should focus on self-improvement in other areas of her life. The
+                        story focuses on her personal growth, her emotional struggles, and the events that occur when
+                        her suppressed powers are unleashed.
+                    </div>
+                </div>
+            </a>
+            <a href="chapter4.html">
+                <div class="dog-item">
+                    <div class="box-content">
+                        <img src="assets/4.jpg">
+                        <img class="gender girl" src="assets/girl.png">
+                        <p>トイプードル</p>
+                        <p class="dog-price">188,000円</p>
+                    </div>
+                    <div class="hover-text">Name: Jtoypoodleo
+                        <br>Jtoypoodleo is framed for murder and sent to Green Doggy Street Prison. To clear her name
+                        and save her father, Jtoypoodleo must awaken her own Stand and battle the main antagonist,
+                        Nmixa, a follower of Alongcoaty. Jtoypoodleo allies with other inmates to fight Nmixa's schemes.
+                    </div>
+                </div>
+            </a>
+            <a href="chapter5.html">
+                <div class="dog-item">
+                    <div class="box-content"><img src="assets/5.jpg">
+                        <img class="gender girl" src="assets/girl.png">
+                        <p>ミックス</p>
+                        <p class="dog-price">238,000円</p>
+                    </div>
+                    <div class="hover-text">Name: Nmixa
+                        <br>The friendship between Nmixa, a punk-rock singer, and Alongcoaty, a more naive doggy, as
+                        they navigate love, ambition, and their lives in the city.
+                    </div>
+                </div>
+            </a>
+            <a href="chapter6.html">
+                <div class="dog-item" id="blue">
+                    <div class="box-content"><img src="assets/6.jpg">
+                        <img class="gender boy" src="assets/boy.png">
+                        <p>ロング コート</p>
+                        <p class="dog-price" id="dark">258,000円</p>
+                    </div>
+                    <div class="hover-text">Name: Alongcoaty
+                        <br>Alongcoaty, an apothecary's adopted dog who is kidnapped and sold into servitude in the
+                        imperial palace's rear palace. There, his extensive knowledge of medicine and poisons allows him
+                        to solve medical mysteries, attracting the attention of the influential eunuch, Dchihuahuan.
+                        This leads to his promotion from a laundry maid to a lady-in-waiting and food taster, thrusting
+                        him into a world of palace intrigue, politics, and murder conspiracies.
+                    </div>
+                </div>
+            </a>
+            <a href="chapter7.html">
+                <div class="dog-item">
+                    <div class="box-content"><img src="assets/7.jpg">
+                        <img class="gender girl" src="assets/girl.png">
+                        <p>ミックス</p>
+                        <p class="dog-price">438,000円</p>
+                    </div>
+                    <div class="hover-text">Name:
+                        <br>The narrative follows Tmixn, who joins the military after her hometown is destroyed and her
+                        mother is eaten by a Titan dog, vowing to exterminate every last one. As the series progresses,
+                        the story becomes a complex political and historical narrative that explores the origin of the
+                        Titan dogs, dogs conflict, and the distortion of truth over time.
+                    </div>
+                </div>
+            </a>
+            <a href="chapter8.html">
+                <div class="dog-item" id="blue">
+                    <div class="box-content">
+                        <img src="assets/8.jpg">
+                        <img class="gender boy" src="assets/boy.png">
+                        <p>ロングコート・チワワ</p>
+                        <p class="dog-price" id="dark">228,000円</p>
+                    </div>
+                    <div class="hover-text">Name: Dchihuahuan
+                        <br>Dchihuahuan, a puppy whose family is slaughtered by a demon dog, with his only surviving
+                        sibling, his sister Tmixn, being turned into a demon herself. Determined to avenge his family
+                        and find a cure for Tmixn, Dchihuahuan joins the Slayer Corps, an organization that fights dog
+                        demons, and embarks on a journey to defeat the dog demon king, Jtoypoodleo.
+                    </div>
+                </div>
+            </a>
+            <a href="chapter9.html">
+                <div class="dog-item" id="blue">
+                    <div class="box-content">
+                        <img src="assets/9.jpg">
+                        <img class="gender boy" src="assets/boy.png">
+                        <p>シーズー</p>
+                        <p class="dog-price" id="dark">218,000円</p>
+                    </div>
+                    <div class="hover-text">Name: Mmixy
+                        <br>Mmixy, a gloomy middle school dog who initially harbors dark fantasies about his popular
+                        classmate, Tmixn. Over time, their interactions, which start in the library and involve Mmixy
+                        secretly helping Tmixn, lead to a genuine friendship and a budding romance, as Tmixn sees past
+                        his exterior to recognize his good nature.
+                    </div>
+                </div>
+            </a>
             <div class="scroll">
-                <p>もっと見る</p>
+                <p>もっと見る
+                    <br>˅
+                </p>
             </div>
 
 
 
 
-        </div>
 </body>
 
 </html>
