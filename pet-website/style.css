@@ -664,8 +664,8 @@ body {
 
 .slayy {
     position: absolute;
-    bottom: -256%;
-    left: -5%;
+    bottom: 86px;
+    left: -10px;
     transform: rotate(-15deg);
     width: 280px;
     height: auto;
