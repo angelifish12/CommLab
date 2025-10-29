@@ -62,3 +62,9 @@ Built around a few core containers:
 ### Hint page
 
 - A focused layout that displays warnings/instructions when users click decoy UI (e.g., search, fish/reptile icon).
+## Technical: CSS
+
+## Reflection and Future Development
+## Credits & References
+- [Youtube](https://youtu.be/qndys9v_Drg?si=KLnTzb27JxwrcSmP) & Google
+- help from Leon & LA & my wonderful peers
