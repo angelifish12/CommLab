@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(63, 158, 77);
+    color: yellow;
+    font-size: 30px;
+}
+
+body p {
+    display: inline-block;
+}
+
+.o {
+    display: inline-block;
+    color: gray;
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.m {
+    display: inline-block;
+    color: white;
+    font-size: 150px;
+}
