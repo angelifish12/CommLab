@@ -133,7 +133,8 @@ body p {
     font-size: 500px;
     position: relative;
     left: 120px;
-    top: -190px
+    top: -190px;
+    animation: shake 1.2s infinite;
 }
 
 .cry span {
@@ -289,6 +290,10 @@ body p {
 .cool {
     background-color: rgb(60, 154, 201);
     top: 550px;
+}
+
+.cool .o:hover {
+    color: white;
 }
 
 .s {
