@@ -5,7 +5,8 @@
 ### by Angelina Chen
 ### You click into a pet site. Then, by accident, you open a single dog's profile. You try to back out, but the cursor drags a thin thread of narrative behind it, sticky as sugar, tugging you deeper.
 
-Abstract. 100-150 words that touch upon the contextual meaning of your project. The purpose is to give the viewer a loose framework within which they can read/interpret/enjoy your project.
+When you enter a pet site, you expect to browse, compare, and choose. My project adopts that familiar catalog. Clicking a dog still reveals details, yet the copy slips into fragments of a manga universe: each dog anchors a parallel storyline, incomplete by design. What looks like product data becomes character, setting, and rumor. The result is a reading mode between search and story: you can enjoy each vignette on its own, but the full picture never settles. Desire meets confusion; selection becomes interpretation. The pet you want keeps leading somewhere else.
+
 
 ![dog](dog1.png) ![dog](dog2.png)
 
