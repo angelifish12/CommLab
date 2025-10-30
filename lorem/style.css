@@ -20,3 +20,429 @@ body p {
     color: white;
     font-size: 150px;
 }
+
+.second {
+    position: relative;
+    left: 1000px;
+    width: 300px;
+    height: 300px;
+}
+
+.second span {
+    transform: rotate(10deg);
+    /* transition: background-color 0.6s ease-in-out; */
+}
+
+.second .o {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(118, 76, 25);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: move-and-bounce 5s infinite alternate;
+}
+
+.d {
+    color: pink;
+    animation: moveLinear 10s ease-in infinite;
+    position: relative;
+    left: 150px;
+}
+
+.l {
+    color: rgb(72, 28, 101);
+    animation: moveRight 5s ease-in infinite;
+    position: relative;
+    top: 130px;
+}
+
+.circle {
+    position: relative;
+    right: 500px;
+    width: 250px;
+    text-align: center;
+    height: 150px;
+    margin: auto;
+    animation: rotate-circle 5s linear infinite alternate;
+    /* animation: rotate(180deg) 20s linear infinite; */
+    background-color: rgb(118, 76, 25);
+}
+
+.circle span {
+    position: absolute;
+    transform-origin: center bottom;
+}
+
+.swim {
+    background-color: rgb(60, 154, 201);
+    width: 350px;
+    height: 150px;
+}
+
+.swim .o {
+    animation: shake 0.5s infinite;
+}
+
+.swim span {
+    display: inline-block;
+    animation: shake 0.5s infinite;
+}
+
+.swim span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.swim span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.swim span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.swim span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.swim span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.swim span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.swim span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.swim span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.cry {
+    width: 800px;
+    height: 800px;
+    position: relative;
+}
+
+.cry .o {
+    font-size: 500px;
+    position: relative;
+    left: 120px;
+    top: -190px
+}
+
+.cry span {
+    position: absolute;
+    color: blue;
+    font-size: 30px;
+    animation: fall 10s ease-in infinite;
+}
+
+.cry span:nth-child(-n+18) {
+    left: 150px;
+}
+
+.cry span:nth-child(n+19) {
+    left: 350px;
+}
+
+.cry span:nth-child(2) {
+    top: 60px;
+}
+
+.cry span:nth-child(3) {
+    top: 60px;
+}
+
+.cry span:nth-child(4) {
+    top: 80px;
+}
+
+.cry span:nth-child(5) {
+    top: 120px;
+}
+
+.cry span:nth-child(6) {
+    top: 160px;
+}
+
+.cry span:nth-child(7) {
+    top: 200px;
+}
+
+.cry span:nth-child(8) {
+    top: 240px;
+}
+
+.cry span:nth-child(9) {
+    top: 280px;
+}
+
+.cry span:nth-child(10) {
+    top: 320px;
+}
+
+.cry span:nth-child(11) {
+    top: 360px;
+}
+
+.cry span:nth-child(12) {
+    top: 400px;
+}
+
+.cry span:nth-child(13) {
+    top: 440px;
+}
+
+.cry span:nth-child(14) {
+    top: 480px;
+}
+
+.cry span:nth-child(15) {
+    top: 60px;
+}
+
+.cry span:nth-child(16) {
+    top: 60px;
+}
+
+.cry span:nth-child(17) {
+    top: 80px;
+}
+
+.cry span:nth-child(18) {
+    top: 120px;
+}
+
+.cry span:nth-child(19) {
+    top: 40px;
+}
+
+.cry span:nth-child(20) {
+    top: 60px;
+}
+
+.cry span:nth-child(21) {
+    top: 80px;
+}
+
+.cry span:nth-child(22) {
+    top: 120px;
+}
+
+.cry span:nth-child(23) {
+    top: 160px;
+}
+
+.cry span:nth-child(24) {
+    top: 200px;
+}
+
+.cry span:nth-child(25) {
+    top: 240px;
+}
+
+.cry span:nth-child(26) {
+    top: 280px;
+}
+
+.cry span:nth-child(27) {
+    top: 320px;
+}
+
+.cry span:nth-child(28) {
+    top: 360px;
+}
+
+.cry span:nth-child(29) {
+    top: 400px;
+}
+
+.cry span:nth-child(30) {
+    top: 440px;
+}
+
+.cry span:nth-child(31) {
+    top: 480px;
+}
+
+.winter span {
+    font-size: 10px;
+    color: aqua;
+    animation: moveLinear 15s ease-in infinite reverse;
+    position: relative;
+    transform: translateX(20px) rotate(180deg);
+
+}
+
+.winter .o {
+    left: 100px;
+    position: relative;
+    animation: shake 0.5s infinite;
+}
+
+.cool {
+    background-color: rgb(60, 154, 201);
+    top: 550px;
+}
+
+.s {
+    color: white;
+    font-size: 200px;
+    position: relative;
+    left: 500px;
+    animation: shake 1s infinite;
+}
+
+.p {
+    color: white;
+    font-size: 250px;
+    position: relative;
+    left: 400px;
+    animation: shake 1s infinite;
+}
+
+.a {
+    color: white;
+    font-size: 210px;
+    position: relative;
+    left: 340px;
+    animation: shake 1s infinite;
+}
+
+.n {
+    color: white;
+    font-size: 220px;
+    position: relative;
+    left: 290px;
+    animation: shake 1s infinite;
+}
+
+.t {
+    color: white;
+    font-size: 230px;
+    position: relative;
+    left: 200px;
+    animation: shake 1s infinite;
+}
+
+.u {
+    color: white;
+    font-size: 190px;
+    position: relative;
+    left: 120px;
+    animation: shake 1s infinite;
+}
+
+.po {
+    font-size: 300px;
+    color: white;
+}
+
+.swan {
+    background-color: rgb(60, 154, 201);
+    top: 550px;
+}
+
+.lo {
+    color: white;
+    font-size: 190px;
+    position: relative;
+    left: 120px;
+    animation: shake 1s infinite;
+}
+
+.b {
+    color: white;
+    font-size: 190px;
+    position: relative;
+    left: 120px;
+    animation: shake 1s infinite;
+}
+
+.bo {
+    font-size: 300px;
+    color: white;
+    position: relative;
+    left: 120px;
+    animation: shake 1s infinite;
+}
+
+@keyframes rotate-circle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes move-and-bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        transform: translate(-80px, -80px);
+    }
+}
+
+@keyframes moveRight {
+    from {
+        right: 0px;
+    }
+
+    to {
+        right: 140px;
+    }
+}
+
+@keyframes moveLinear {
+    from {
+        top: 40px;
+    }
+
+    to {
+        top: -200px;
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-2px, -2px);
+    }
+
+    50% {
+        transform: translate(2px, 2px);
+    }
+
+    75% {
+        transform: translate(-2px, 2px);
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+}
