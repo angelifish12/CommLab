@@ -3,7 +3,7 @@
 
 
 ### by Angelina Chen
-### You click into a pet site. Then, by accident, you open a single dog's profile. You try to back out, but the cursor drags a thin thread of narrative behind it, sticky as sugar, tugging you deeper.
+### You click into a pet site. Then, by accident, you open a single dog's profile. You try to back out, but the cursor drags a thin thread of narrative behind it, sticky as sugar, tugging you deeper...
 
 When you enter a pet site, you expect to browse, compare, and choose. My project adopts that familiar catalog. Clicking a dog still reveals details, yet the copy slips into fragments of a manga universe: each dog anchors a parallel storyline, incomplete by design. What looks like product data becomes character, setting, and rumor. The result is a reading mode between search and story: you can enjoy each vignette on its own, but the full picture never settles. Desire meets confusion; selection becomes interpretation. The pet you want keeps leading somewhere else.
 
@@ -97,8 +97,15 @@ What's happening conceptually:
 
 - Smaller selectors (img, p, h2, mark) handle typographic and emphasis details without touching layout.
 ## Reflection and Future Development
-Summarize your conclusions and critical reflections on your work. Consider how your project evolved from project proposal to its current version. In regards to the concept you set out to explore, which parts of the project work well and which ones are you less satisfied with. 
-Reflect on feedback received from peer students, instructor and guest critics and constructive adjustments to the project based on the feedback. Also demonstrate what you would like to implement further and how you would continue to explore in future work any of the ideas your project engaged.
+Overall, the project meets my core intent by using a familiar pet-catalog user interface to smuggle in parallel narratives. The **chapter pages** work better than expected as story containers, yet they don't read as webpages; the jump from catalog to manga vignette can feel like a format break. I added many small, discoverable details to keep users exploring, but too much might result in user getting fatigue. Because the interface leans on **Japanese text and references**, some viewers got lost.
+
+From **interaction day:** people found the layout cute but the purpose unclear. In response, I added the **character chart** and light **instructions**, which improved orientation. I'm happy with the **homepage** baseline, though it could be more refined, and several buttons/paths still need completion.
+
+**Next steps:**
+
+* Give chapter pages a clearer web structure.
+* Evolve beyond borrowed manga: develop original dog storylines.
+* Finish all interactive states; test on mobile.
 
 ## Credits & References
 - [Youtube](https://youtu.be/qndys9v_Drg?si=KLnTzb27JxwrcSmP) & Google
