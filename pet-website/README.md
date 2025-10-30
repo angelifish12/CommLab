@@ -63,7 +63,26 @@ Built around a few core containers:
 
 - A focused layout that displays warnings/instructions when users click decoy UI (e.g., search, fish/reptile icon).
 ## Technical: CSS
+layered manga + character chart on one page
 
+For Chapter 1, I needed the manga images and a fixed character chart to coexist without pushing each other around. I did this by establishing a positioning context on the outer wrapper and combining float (for the chart's column) with absolute positioning (for chapter-specific pins/labels).
+
+What's happening conceptually:
+
+- `.frieren` is the chapter wrapper and uses `position: relative`; so all absolutely positioned elements inside (e.g., labels, next-chapter link) use it as their coordinate system.
+
+![frieren](frieren.png)
+
+- `.character` is the character chart. It floats right, forming a persistent sidebar box with an aqua border and darker blue background. This same pattern is reused for Chapters 1–9.
+
+- `.frieren-character` items are absolutely positioned (top/right) so I can place them precisely next to relevant manga panels per chapter without affecting the document flow.
+
+![character](character.png)
+
+
+- `.poodle` (text that lead to the next chapter) is also absolute, positioned consistently within the .frieren box and updated per chapter.
+
+- Smaller selectors (img, p, h2, mark) handle typographic and emphasis details without touching layout.
 ## Reflection and Future Development
 ## Credits & References
 - [Youtube](https://youtu.be/qndys9v_Drg?si=KLnTzb27JxwrcSmP) & Google
