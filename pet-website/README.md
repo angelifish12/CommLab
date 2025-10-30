@@ -1,7 +1,11 @@
-# Pet Story 
+# 🐶 Pet Story 🐶
+
+
 
 ### by Angelina Chen
 ### You click into a pet site. Then, by accident, you open a single dog's profile. You try to back out, but the cursor drags a thin thread of narrative behind it, sticky as sugar, tugging you deeper.
+
+Abstract. 100-150 words that touch upon the contextual meaning of your project. The purpose is to give the viewer a loose framework within which they can read/interpret/enjoy your project.
 
 ![dog](dog1.png) ![dog](dog2.png)
 
@@ -92,6 +96,9 @@ What's happening conceptually:
 
 - Smaller selectors (img, p, h2, mark) handle typographic and emphasis details without touching layout.
 ## Reflection and Future Development
+Summarize your conclusions and critical reflections on your work. Consider how your project evolved from project proposal to its current version. In regards to the concept you set out to explore, which parts of the project work well and which ones are you less satisfied with. 
+Reflect on feedback received from peer students, instructor and guest critics and constructive adjustments to the project based on the feedback. Also demonstrate what you would like to implement further and how you would continue to explore in future work any of the ideas your project engaged.
+
 ## Credits & References
 - [Youtube](https://youtu.be/qndys9v_Drg?si=KLnTzb27JxwrcSmP) & Google
 - help from Leon & LA & my wonderful peers
