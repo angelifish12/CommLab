@@ -1,4 +1,9 @@
-# Pet Story
+# Pet Story 
+
+### by Angelina Chen
+### You click into a pet site. Then, by accident, you open a single dog's profile. You try to back out, but the cursor drags a thin thread of narrative behind it, sticky as sugar, tugging you deeper.
+
+![dog](dog1.png) ![dog](dog2.png)
 
 ## Design and Composition: Inspiration/Distortion
 
@@ -28,6 +33,9 @@ I also added a Home button on every dog's story, so when the user isn't sure whe
 ![home](home.png)
 
 Beyond that, I made many insignificant parts clickable and linked them to unrelated sites, adding moments of surprise and confusion. These micro-movements encourage the user to spend more time exploring. With so many subtle hints, they can always discover something they didn't expect.
+
+![dog](cutme.png) ![dog](black.png)
+
 ## Technical: HTML hierarchy
 ### Main page (	`index.html`) — Dogs
 
