@@ -1,0 +1,69 @@
+body {
+    transition: background-color 5s ease-out;
+    background-color: rgb(157, 219, 255);
+}
+
+body.flash {
+    animation: flashBg 2s;
+}
+
+@keyframes flashBg {
+    from {
+        background-color: white;
+    }
+
+    to {
+        background-color: grey;
+    }
+}
+
+#start {
+    font-size: 25px;
+    width: 140px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(106, 151, 234);
+    transition: transform 0.5s ease-out;
+}
+
+.normalRainDrop {
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    animation: fall 20s ease-in;
+}
+
+.notNormalRainDrop {
+    cursor: pointer;
+    animation: fall 20s ease-in;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100px);
+    }
+}
+
+.lightening {
+    color: darkblue;
+    font-size: 500px;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    animation: disappear 2s forwards;
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
