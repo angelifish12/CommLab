@@ -114,3 +114,10 @@ body.flash {
         transform: rotate(360deg);
     }
 }
+
+.number {
+    font-size: 150px;
+    background-color: black;
+    color: white;
+    animation: spin 1s linear infinite;
+}

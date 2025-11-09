@@ -2,7 +2,7 @@ console.log("JS loaded!");
 function makeOneRaindrop() {
     let a1 = document.createElement("a");
     a1.innerHTML = "𓄼";
-    a1.className = "normalRainDrop"
+    a1.className = "normalRainDrop";
     a1.onclick = rainDropClicked;
     let rTop = Math.random() * 800;
     let rLeft = Math.random() * 1400;
@@ -31,7 +31,7 @@ function umbrella() {
     let a1 = document.createElement("a");
     console.log("Umbrella called!");
     a1.innerHTML = "☂︎";
-    a1.className = "umbrella"
+    a1.className = "umbrella";
     a1.onclick = umbrellaClicked;
     let rLeft = Math.random() * 1400;
     a1.style.left = rLeft + "px";
@@ -82,7 +82,7 @@ function makeDuplicateUmbrella() {
 }
 
 function newPage() {
-    window.location = "other.html"
+    window.location = "other.html";
 }
 
 function makeManyRainDrops() {
@@ -96,7 +96,7 @@ function makeManyRainDrops() {
 
     let a1 = document.createElement("a");
     a1.innerHTML = "𓄼";
-    a1.className = "notNormalRainDrop"
+    a1.className = "notNormalRainDrop";
     a1.style.color = (245, 245, 245);
     a1.style.position = "absolute";
     a1.onclick = newPage;
