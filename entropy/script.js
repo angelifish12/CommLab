@@ -76,8 +76,6 @@ function makeDuplicateUmbrella() {
     let rLeft = Math.random() * 1400;
     a1.style.top = rTop + "px";
     a1.style.left = rLeft + "px";
-    a1.style.animation = "spin 1s linear infinite";
-
     document.body.append(a1);
 }
 
