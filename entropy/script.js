@@ -19,6 +19,7 @@ function rainDropClicked() {
 
 function lightening() {
     document.body.classList.remove("flash");
+    void document.body.offsetWidth;
     let a1 = document.createElement("a");
     a1.innerHTML = "⚡︎";
     a1.className = "lightening"
