@@ -14,6 +14,7 @@ SEE MY RENDERED WORK [HERE](https://github.com/angelifish12/CommLab)
 
 * [ first website](my-first-website)
 * [ The Ugly Duckling](lorem)
+* [entropy](entropy)
 
 ⠀⢀⠤⡀⡀⣴⣶⣤⣶⣦⠀
 
@@ -23,4 +24,4 @@ SEE MY RENDERED WORK [HERE](https://github.com/angelifish12/CommLab)
 
 ⠀⠘⢄⡀⠀⠛⠀⢀⡠⠃ 
 
-<!-- all the images can be found on https://www.higopet.com/ -->
+<!-- all the images for the pet-website can be found on https://www.higopet.com/ -->
