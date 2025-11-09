@@ -17,11 +17,8 @@ SEE MY RENDERED WORK [HERE](https://github.com/angelifish12/CommLab)
 * [entropy](entropy)
 
 ⠀⢀⠤⡀⡀⣴⣶⣤⣶⣦⠀
-
 ⠀⢸⠀⠀⠀⠻⠿⠛⠿⠟⠀
-
 ⢐⣺⠀⡄⠀⠀⠀✮⠀⣗⡂
-
 ⠀⠘⢄⡀⠀⠛⠀⢀⡠⠃ 
 
 <!-- all the images for the pet-website can be found on https://www.higopet.com/ -->
