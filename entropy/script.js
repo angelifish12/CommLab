@@ -37,6 +37,7 @@ function umbrella() {
     let rLeft = Math.random() * 1400;
     a1.style.left = rLeft + "px";
     document.body.append(a1);
+    fish();
 }
 
 function umbrellaClicked() {
@@ -72,6 +73,49 @@ function makeDuplicateUmbrella() {
     let a1 = document.createElement("a");
     a1.innerHTML = "☂︎";
     a1.className = "umbrella spinning";
+
+    let rTop = Math.random() * 800;
+    let rLeft = Math.random() * 1400;
+    a1.style.top = rTop + "px";
+    a1.style.left = rLeft + "px";
+    document.body.append(a1);
+}
+
+function fish() {
+    let a1 = document.createElement("div");
+    a1.className = "fish";
+    a1.onclick = fishClicked;
+    a1.innerHTML = "<span>𓆝</span><span>𓆟</span><span>𓆞</span><span>𓆟</span><span>𓆝</span>";
+    let rTop = Math.random() * 800;
+    let rLeft = Math.random() * 1400;
+    a1.style.top = rTop + "px";
+    a1.style.left = rLeft + "px";
+    document.body.append(a1);
+}
+
+function fishClicked() {
+    this.classList.add("swimming");
+    // document.body.style.backgroundColor = "darkblue";
+    fillFish();
+}
+
+function fillFish() {
+    makeMoreFish();
+    makeMoreFish();
+    makeMoreFish();
+    makeMoreFish();
+    makeMoreFish();
+    makeMoreFish();
+    makeMoreFish();
+    makeMoreFish();
+    makeMoreFish();
+    makeMoreFish();
+}
+
+function makeMoreFish() {
+    let a1 = document.createElement("div");
+    a1.innerHTML = "<span>𓆝</span><span>𓆟</span><span>𓆞</span><span>𓆟</span><span>𓆝</span>";
+    a1.className = "fish swimming";
 
     let rTop = Math.random() * 800;
     let rLeft = Math.random() * 1400;

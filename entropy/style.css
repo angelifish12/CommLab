@@ -121,3 +121,43 @@ body.flash {
     color: white;
     animation: spin 1s linear infinite;
 }
+
+.fish {
+    color: rgb(29, 176, 190);
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    z-index: 15;
+    cursor: pointer;
+}
+
+.fish span {
+    display: inline-block;
+    animation: swim 5s ease-in-out infinite;
+}
+
+.fish.swimming span {
+    animation: swim 2s ease-in-out infinite;
+}
+
+@keyframes swim {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(40px);
+    }
+
+    50% {
+        transform: translateX(20);
+    }
+
+    75% {
+        transform: translateX(-40px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
