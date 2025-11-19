@@ -1,4 +1,7 @@
 let s = document.querySelector("span");
+let myInput = document.querySelector("#myInput");
+let myOutput = document.querySelector("#myOutput");
+let myButton = document.querySelector("#myButton");
 console.log(s);
 
 function move(eventInfo) {
@@ -12,6 +15,8 @@ function move(eventInfo) {
     element.style.transform = "translate(" + randomX + "px, 0px)";
 }
 
+myButton.addEventListener("mouseover", buttonClicked);
+
 // s.addEventListener("mouseover", move)
 
 function addMover(element) {
@@ -19,7 +24,11 @@ function addMover(element) {
 
 }
 
+function inputChanged(eventInfo) {
+    myOutput.innerHTML = eventInfo.target.value;
+}
+
 //select all the spans
 let allSpans = document.querySelectorAll("span");
 allSpans.forEach(addMover);
-
+myInput = addEventListener("input", inputChanged);
