@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(119, 76, 29);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 900px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+
+    margin: auto;
+    margin-top: 200px;
+}
+
+
+
+.minutes {
+    width: 350px;
+    height: 100%;
+    color: rgb(58, 112, 162);
+    display: flex;
+    flex-direction: row;
+
+    /* outline: blue 3px dashed; */
+}
+
+.hours {
+    width: 350px;
+    height: 100%;
+    font-size: 150px;
+    color: rgb(58, 112, 162);
+    display: flex;
+    flex-direction: row;
+}
+
+.hours div,
+.minutes div {
+    border: .5px solid rgb(228, 94, 94);
+    background-color: rgb(91, 55, 26);
+    flex: 1;
+    /*make sure each black div takes the same space as others in their section */
+}
+
+.seconds {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    /* flex-direction: row; */
+    /* background-color: rgb(91, 55, 138);  */
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.seconds div {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(228, 94, 94);
+    border: .5px solid rgb(228, 94, 94);
+}
+
+.original-bard,
+.new-bird {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    object-fit: contain;
+    /* i googled it ↑*/
+}
+
+.new-bird {
+    display: none;
+}
