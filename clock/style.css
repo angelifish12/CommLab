@@ -28,8 +28,8 @@ body {
 
 .minutes img {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 400px;
+    height: 400px;
     object-fit: contain;
     /* i googled it ↑*/
 }
@@ -43,14 +43,6 @@ body {
     flex-direction: row;
 }
 
-.hours div,
-.minutes div {
-    border: .5px solid rgb(228, 94, 94);
-    background-color: rgb(91, 55, 26);
-    flex: 1;
-    /*make sure each black div takes the same space as others in their section */
-}
-
 .seconds {
     width: 800px;
     height: 800px;
@@ -58,8 +50,9 @@ body {
     /* flex-direction: row; */
     /* background-color: rgb(91, 55, 138);  */
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     margin: 0 auto;
+    z-index: -1;
 }
 
 .seconds div {

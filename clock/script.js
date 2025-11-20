@@ -28,7 +28,7 @@ function getTheTime() {
         img.src = "assets/door.gif";
         img.className = "door";
         img.style.transform = "rotate(" + (i * 6) + "deg)";
-        minutesBoxBox.append(img);
+        minutesBox.append(img);
     });
 
 
@@ -40,6 +40,7 @@ function getTheTime() {
         let size = 100 - (i * (100 / 60));
         div.style.width = size + '%';
         div.style.height = size + '%';
+        // thank u google
         secondsBox.append(div);
     });
 }
