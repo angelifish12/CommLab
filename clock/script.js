@@ -26,21 +26,26 @@ function getTheTime() {
     // S
     // clear out the second div completely
     secondsBox.innerHTML = "";
-    let centerX = 160;
-    let centerY = 160;
-    let radius = 140;
-    //put divs into the seconds div to represent
-    //how many seconds the current moment "now" has
     repeat(s, function (i) {
         let div = document.createElement("div");
-        let angle = (i / 60) * 2 * Math.PI;
-        let x = centerX + radius * Math.cos(angle);
-        let y = centerY + radius * Math.sin(angle);
-        div.style.left = x + 'px';
-        div.style.top = y + 'px';
+        let size = 100 - (i * (100 / 60));
+        div.style.width = size + '%';
+        div.style.height = size + '%';
         secondsBox.append(div);
     })
 }
+// let centerX = 160;
+// let centerY = 160;
+// let radius = 140;
+//put divs into the seconds div to represent
+//how many seconds the current moment "now" has
+// repeat(s, function (i) {
+//     let div = document.createElement("div");
+//     let angle = (i / 60) * 2 * Math.PI;
+//     let x = centerX + radius * Math.cos(angle);
+//     let y = centerY + radius * Math.sin(angle);
+// div.style.left = x + 'px';
+// div.style.top = y + 'px';
 
 // circle = document.getElementById('circleToMove');
 

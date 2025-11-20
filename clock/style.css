@@ -44,8 +44,8 @@ body {
 }
 
 .seconds {
-    width: 320px;
-    height: 320px;
+    width: 800px;
+    height: 800px;
     display: flex;
     /* flex-direction: row; */
     /* background-color: rgb(91, 55, 138);  */
@@ -56,11 +56,14 @@ body {
 
 .seconds div {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    background-color: rgb(228, 94, 94);
-    border: .5px solid rgb(228, 94, 94);
+    background-color: transparent;
+    border: 2px solid rgb(234, 181, 121);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .original-bird,
