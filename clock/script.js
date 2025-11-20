@@ -42,7 +42,12 @@ let radius = 140;
 
 repeat(s, function (i) {
     let div = document.createElement("div");
-
+    let angle = (i / 60) * 2 * Math.PI;
+    let x = centerX + radius * Math.cos(angle);
+    let y = centerY + radius * Math.sin(angle);
+    div.style.left = x + 'px';
+    div.style.top = y + 'px';
+    secondsBox.append(div);
 })
 // let angle = 0;
 // speed = 0.05;
@@ -55,15 +60,15 @@ repeat(s, function (i) {
 //     circle.style.top = y + 'px';
 // }
 
-setInterval(getTheTime, 1000);
-getTheTime();
+// setInterval(getTheTime, 1000);
+// getTheTime();
 
 
 
 
 // Leon's Helper function:
-function repeat(n, action) {
-    for (let i = 0; i < n; i++) {
-        action(i);
-    }
-}
+// function repeat(n, action) {
+//     for (let i = 0; i < n; i++) {
+//         action(i);
+//     }
+// }
