@@ -1,7 +1,6 @@
 let secondsBox = document.querySelector(".seconds")
 let sound = document.querySelector("#ding");
-// let x = centerX + radius * Math.cos(angle);
-// let y = centerY + radius * Math.sin(angle);
+let minutesBox = document.querySelector(".minutes")
 
 function getTheTime() {
     let now = new Date(); //return the current moment
@@ -22,6 +21,16 @@ function getTheTime() {
         originalBird.style.display = "block";
         newBird.style.display = "none";
     }
+    //M
+    minutesBox.innerHTML = "";
+    repeat(m, function (i) {
+        let img = document.createElement("img");
+        img.src = "assets/door.gif";
+        img.className = "door";
+        img.style.transform = "rotate(" + (i * 6) + "deg)";
+        minutesBoxBox.append(img);
+    });
+
 
     // S
     // clear out the second div completely
@@ -32,7 +41,7 @@ function getTheTime() {
         div.style.width = size + '%';
         div.style.height = size + '%';
         secondsBox.append(div);
-    })
+    });
 }
 // let centerX = 160;
 // let centerY = 160;
