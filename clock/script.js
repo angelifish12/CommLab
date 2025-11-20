@@ -36,9 +36,9 @@ function getTheTime() {
 }
 
 // circle = document.getElementById('circleToMove');
-// centerX = 200;
-// centerY = 200;
-// radius = 100;
+let centerX = 160;
+let centerY = 160;
+let radius = 140;
 // let angle = 0;
 // speed = 0.05;
 
