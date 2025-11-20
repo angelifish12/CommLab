@@ -44,8 +44,8 @@ body {
 }
 
 .seconds {
-    width: 800px;
-    height: 800px;
+    width: 900px;
+    height: 900px;
     display: flex;
     /* flex-direction: row; */
     /* background-color: rgb(91, 55, 138);  */
