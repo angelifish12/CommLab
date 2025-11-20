@@ -39,6 +39,11 @@ function getTheTime() {
 let centerX = 160;
 let centerY = 160;
 let radius = 140;
+
+repeat(s, function (i) {
+    let div = document.createElement("div");
+
+})
 // let angle = 0;
 // speed = 0.05;
 
