@@ -8,5 +8,4 @@ function tooth() {
     a1.style.top = rTop + "px";
     a1.style.left = rLeft + "px";
     document.body.append(a1);
-    document.body.style.backgroundColor = "grey";
 }
