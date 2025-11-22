@@ -40,6 +40,8 @@ function getTheTime() {
         img.style.top = randomY + "px";
         hoursBox.append(img);
     });
+    // console.log("Current hour:", h, "so there are", h, "poops");
+
     //M
     minutesBox.innerHTML = "";
     repeat(m, function (i) {

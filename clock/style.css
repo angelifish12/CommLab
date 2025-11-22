@@ -12,6 +12,7 @@ body {
 
     margin: auto;
     margin-top: 200px;
+    position: relative;
 }
 
 
@@ -22,16 +23,23 @@ body {
     color: rgb(58, 112, 162);
     display: flex;
     flex-direction: row;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
     /* outline: blue 3px dashed; */
 }
 
 .minutes img {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     object-fit: contain;
     /* i googled it ↑*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .hours {
@@ -41,6 +49,8 @@ body {
     color: rgb(58, 112, 162);
     display: flex;
     flex-direction: row;
+    position: relative;
+    z-index: 2;
 }
 
 .seconds {
@@ -73,6 +83,7 @@ body {
     width: 350px;
     height: 300px;
     object-fit: contain;
+    z-index: 3;
 }
 
 .new-bird {
@@ -84,4 +95,7 @@ body {
     height: 30px;
     position: absolute;
     object-fit: contain;
+    /* top: 50px;
+    left: 50px; */
+    z-index: 4;
 }
