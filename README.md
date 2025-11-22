@@ -12,7 +12,7 @@ SEE MY RENDERED WORK [HERE](https://github.com/angelifish12/CommLab)
 * [study abroad in Paris project](scroll-rec)
 * [ The Ugly Duckling](lorem)
 * [entropy](entropy)
-* [clock] (clock)
+* [clock](clock)
 
 ⠀⢀⠤⡀⡀⣴⣶⣤⣶⣦⠀
 ⠀⢸⠀⠀⠀⠻⠿⠛⠿⠟⠀
