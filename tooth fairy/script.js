@@ -1,3 +1,10 @@
+let sadTooth;
+let isFalling = false;
+
+function sadTooth{
+    sadTooth = document.querySelector('.special');
+}
+
 function tooth() {
     let a1 = document.createElement("a");
     // a1.innerHTML = ;

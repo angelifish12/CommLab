@@ -38,8 +38,8 @@ function getTheTime() {
     repeat(s, function (i) {
         let div = document.createElement("div");
         let size = 100 - (i * (100 / 60));
-        div.style.width = size + '%';
-        div.style.height = size + '%';
+        div.style.width = size + "%";
+        div.style.height = size + "%";
         // thank u google
         secondsBox.append(div);
     });
