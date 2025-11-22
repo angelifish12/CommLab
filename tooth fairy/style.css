@@ -30,3 +30,11 @@ body {
 .flip img {
     transform: rotate(180deg);
 }
+
+.special {
+    cursor: pointer;
+}
+
+.special:hover {
+    opacity: 0.8;
+}

@@ -2,22 +2,22 @@ let sadTooth;
 let isFalling = false;
 let toothTop = 0;
 
-function sadTooth{
+function sadToothh() {
     sadTooth = document.querySelector(".special");
-    // sadTooth.style.cursor = "pointer";
-    // sadTooth.addEventlistener("click", startFalling);
     sadTooth.onclick = startFalling;
 }
 
 function startFalling() {
     if (isFalling == false) {
-        isFalling == true;
+        isFalling = true;
         sadTooth.style.position = "fixed";
         toothTop = 100;
         sadTooth.style.top = toothTop + "px";
-
+        sadTooth.style.left = "50%";
+        sadTooth.style.top = toothTop + "px";
     }
 }
+sadToothh();
 
 function tooth() {
     let a1 = document.createElement("a");
@@ -29,4 +29,11 @@ function tooth() {
     a1.style.top = rTop + "px";
     a1.style.left = rLeft + "px";
     document.body.append(a1);
+}
+
+function updateFalling() {
+    if (isFalling) {
+        toothTop = toothTop + 5;
+        sadTooth.style.top = toothTop + "px";
+    }
 }
