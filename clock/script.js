@@ -1,3 +1,4 @@
+let hoursBox = document.querySelector(".hours")
 let secondsBox = document.querySelector(".seconds")
 let sound = document.querySelector("#ding");
 let minutesBox = document.querySelector(".minutes")
@@ -8,11 +9,18 @@ function getTheTime() {
     let m = now.getMinutes();    // 0–59
     let s = now.getSeconds();    // 0–59
 
+    hoursBox.innerHTML = "";
 
-    console.log(h, m, s);
+    let originalBird = document.createElement("img");
+    originalBird.className = "original-bird";
+    originalBird.src = "assets/bird.gif";
+    hoursBox.append(originalBird);
 
-    let originalBird = document.querySelector(".original-bird");
-    let newBird = document.querySelector(".new-bird");
+    let newBird = document.createElement("img");
+    newBird.className = "new-bird";
+    newBird.src = "assets/birdout.gif";
+    hoursBox.append(newBird);
+    // console.log(h, m, s);
 
     if (m == 0) {
         originalBird.style.display = "none";
@@ -21,6 +29,17 @@ function getTheTime() {
         originalBird.style.display = "block";
         newBird.style.display = "none";
     }
+    //H
+    repeat(h, function (i) {
+        let img = document.createElement("img");
+        img.src = "assets/poop.gif";
+        img.className = "poop";
+        let randomX = Math.random() * 300;
+        let randomY = Math.random() * 250;
+        img.style.left = randomX + "px";
+        img.style.top = randomY + "px";
+        hoursBox.append(img);
+    });
     //M
     minutesBox.innerHTML = "";
     repeat(m, function (i) {
@@ -30,8 +49,6 @@ function getTheTime() {
         img.style.transform = "rotate(" + (i * 6) + "deg)";
         minutesBox.append(img);
     });
-
-
     // S
     // clear out the second div completely
     secondsBox.innerHTML = "";
@@ -48,9 +65,6 @@ function getTheTime() {
 
 setInterval(getTheTime, 1000);
 getTheTime();
-
-
-
 
 // Leon's Helper function:
 function repeat(n, action) {
