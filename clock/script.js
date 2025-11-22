@@ -44,33 +44,7 @@ function getTheTime() {
         secondsBox.append(div);
     });
 }
-// let centerX = 160;
-// let centerY = 160;
-// let radius = 140;
-//put divs into the seconds div to represent
-//how many seconds the current moment "now" has
-// repeat(s, function (i) {
-//     let div = document.createElement("div");
-//     let angle = (i / 60) * 2 * Math.PI;
-//     let x = centerX + radius * Math.cos(angle);
-//     let y = centerY + radius * Math.sin(angle);
-// div.style.left = x + 'px';
-// div.style.top = y + 'px';
 
-// circle = document.getElementById('circleToMove');
-
-
-
-// let angle = 0;
-// speed = 0.05;
-
-// function circle() {
-//     angle += speed;
-//     x = centerX + radius * Math.cos(angle);
-//     y = centerY + radius * Math.sin(angle);
-//     circle.style.left = x + 'px';
-//     circle.style.top = y + 'px';
-// }
 
 setInterval(getTheTime, 1000);
 getTheTime();

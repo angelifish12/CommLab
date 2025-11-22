@@ -1,8 +1,22 @@
 let sadTooth;
 let isFalling = false;
+let toothTop = 0;
 
 function sadTooth{
-    sadTooth = document.querySelector('.special');
+    sadTooth = document.querySelector(".special");
+    // sadTooth.style.cursor = "pointer";
+    // sadTooth.addEventlistener("click", startFalling);
+    sadTooth.onclick = startFalling;
+}
+
+function startFalling() {
+    if (isFalling == false) {
+        isFalling == true;
+        sadTooth.style.position = "fixed";
+        toothTop = 100;
+        sadTooth.style.top = toothTop + "px";
+
+    }
 }
 
 function tooth() {
