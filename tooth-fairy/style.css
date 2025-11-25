@@ -97,7 +97,7 @@ body.first {
 }
 
 body.bed {
-    background-color: darkblue;
+    background-color: rgb(32, 32, 96);
 }
 
 .pillow {
