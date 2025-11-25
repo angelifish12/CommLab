@@ -23,6 +23,8 @@ function startFalling() {
         sadTooth.style.display = "block"
         sadTooth.style.top = toothTop + "px"
         sadTooth.style.animation = "shake 3s infinite";
+        // let scream = document.querySelector("#scream");
+        // scream.play();
 
         // console.log("isFalling AFTER:", isFalling);
         // sadTooth.style.position = "fixed";
@@ -76,6 +78,8 @@ function updateFalling() {
             console.log("Changing to jump.gif");
             sadTooth.src = "assets/jump.gif";
             stage = 2;
+            let scream = document.querySelector("#scream");
+            scream.play();
         } else if (toothTop > 400 && stage == 2) {
             console.log("Changing to jumpp.gif");
             sadTooth.src = "assets/jumpp.gif";
