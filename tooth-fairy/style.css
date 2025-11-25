@@ -1,4 +1,4 @@
-body {
+body.first {
     background-color: rgb(169, 49, 49);
     margin: 0px;
     padding: 20px;
@@ -15,17 +15,18 @@ body {
 .top,
 .flip {
     display: flex;
-    width: 200px;
-    height: auto;
-    gap: 0px;
+    width: 100%;
+    /* height: auto; */
+    /* gap: 0px; */
     justify-content: center;
 }
 
 .top img,
 .flip img {
-    width: 450px;
-    height: auto;
+    /* width: 450px;    */
+    /* height: auto;*/
     margin: 0 -100px;
+
 }
 
 .flip img {
@@ -34,8 +35,80 @@ body {
 
 .special {
     cursor: pointer;
+    z-index: 10;
+
 }
 
 .special:hover {
     opacity: 0.8;
+}
+
+.falling {
+    position: fixed;
+    /* top: 50%; */
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    display: none;
+    /* animation: shake 0.2 infinite; */
+}
+
+.hand-moving {
+    animation: moveHand 3s forwards;
+    z-index: 15;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+
+    25% {
+        transform: translateX(-45%) rotate(5deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+
+    75% {
+        transform: translateX(-55%) rotate(5deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+}
+
+@keyframes moveHand {
+    from {
+        right: 900px;
+    }
+
+    to {
+        right: 500px
+    }
+}
+
+.swirl {
+    position: absolute;
+    width: 1000px;
+    z-index: 1;
+}
+
+body.bed {
+    background-color: darkblue;
+}
+
+.pillow {
+    width: 1000px;
+    position: relative;
+}
+
+.tooth {
+    width: 200px;
+    position: absolute;
+    left: 1000px;
+    top: 300px;
+    z-index: -1;
 }
