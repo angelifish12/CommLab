@@ -8,6 +8,7 @@ let stage = 1;
 sadTooth = document.querySelector(".special.healthy");
 console.log(sadTooth)
 sadTooth.addEventListener("click", startFalling);
+// window.addEventListener("scroll", function(startFalling));
 // }
 
 function startFalling() {
@@ -20,8 +21,9 @@ function startFalling() {
 
         // revela special falling tooth
         sadTooth = document.querySelector(".special.falling");
-        sadTooth.style.display = "block"
-        sadTooth.style.top = toothTop + "px"
+        sadTooth.style.display = "block";
+        sadTooth.style.top = "200px";
+        // sadTooth.style.top = toothTop + "px"
         sadTooth.style.animation = "shake 3s infinite";
         // let scream = document.querySelector("#scream");
         // scream.play();
@@ -55,6 +57,13 @@ function bed() {
     document.location = "bed.html"
 }
 
+function getScrollPercentage() {
+    let scrollTop = document.documentElement.scrollTop;
+    let maxScroll = document.body.scrollHeight - window.innerHeight;
+    let perc = (scrollTop / maxScroll) * 100;
+    return perc;
+}
+
 function tooth() {
     let a1 = document.createElement("a");
     // a1.innerHTML = ;
@@ -71,6 +80,9 @@ function updateFalling() {
     console.log("UPDATE FALLING CALLED! isFalling:", isFalling, "toothTop:", toothTop);
 
     if (isFalling) {
+        let percentage = getScrollPercentage();
+        let toothTop = 200 + (percentage * 3);
+        sadTooth.style.top = toothTop + "px";
         console.log(toothTop)
         toothTop = toothTop + 0.3;
         sadTooth.style.top = toothTop + "px";
@@ -80,7 +92,7 @@ function updateFalling() {
             stage = 2;
             let scream = document.querySelector("#scream");
             scream.play();
-        } else if (toothTop > 400 && stage == 2) {
+        } else if (toothTop > 500 && stage == 2) {
             console.log("Changing to jumpp.gif");
             sadTooth.src = "assets/jumpp.gif";
             stage = 3;
@@ -88,3 +100,5 @@ function updateFalling() {
         }
     }
 }
+
+

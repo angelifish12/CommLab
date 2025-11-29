@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tooth Fairy</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="bedSrcript.js" defer></script>
 </head>
 
 
 <body class="bed">
-    <div>
-        <img class="pillow" src="assets/pillow.gif">
+    <div class="pillowCase">
+        <img class="pillow" src="assets/pillow.gif" draggable="true">
     </div>
-    <div>
-        <img class="tooth" src="assets/tooth.gif">
+    <div class="tooth-box" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+        <img class="tooth" src="assets/tooth.gif" draggable="false">
+        <!-- <img class="pillow" src="assets/pillow.gif" draggable="true"> -->
     </div>
 </body>
 

@@ -100,15 +100,219 @@ body.bed {
     background-color: rgb(32, 32, 96);
 }
 
+
+.pillowCase {
+    display: inline;
+}
+
 .pillow {
-    width: 1000px;
+    width: 700px;
+    position: relative;
+}
+
+
+.tooth-box {
+    width: 150px;
+    /* outline: pink 1px solid; */
+    height: 150px;
+    display: inline-block;
     position: relative;
 }
 
 .tooth {
-    width: 200px;
-    position: absolute;
+    /* width: 200px;
+    position: relative;
     left: 1000px;
     top: 300px;
-    z-index: -1;
+    z-index: -1; */
+    position: absolute;
+    left: -120px;
+    top: -50px;
+}
+
+.tooth-box .pillow {
+    position: absolute;
+    left: -250px;
+    top: -160px;
+}
+
+body.fairy-page {
+    background-color: rgb(66, 2, 66);
+}
+
+.whole-screen {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel,
+.right-panel {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    outline: dashed rgb(255, 255, 255) 2px;
+}
+
+.left-panel {
+    background-color: paleturquoise;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.left-top {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+}
+
+.left-bottom {
+    background-color: paleturquoise;
+    display: none;
+    padding: 20px;
+    position: relative;
+}
+
+.right-panel {
+    background-color: rgb(32, 32, 96);
+}
+
+.right-panel img {
+    width: 400px;
+    position: relative;
+    top: 150px;
+}
+
+.phone {
+    animation: shaking 1s infinite;
+    width: 600px;
+}
+
+.phone2 {
+    position: absolute;
+    left: 120px;
+    bottom: 500px;
+    animation: shakee 3s infinite;
+}
+
+.chat {
+    width: 400px;
+    left: 300px;
+    bottom: 500px;
+    position: absolute;
+}
+
+@keyframes shaking {
+    0% {
+        transform: translateX(0%) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(3%) rotate(3deg);
+    }
+
+    50% {
+        transform: translateX(-3%) rotate(-3deg);
+
+    }
+
+    75% {
+        transform: translateX(3%) rotate(3deg);
+
+    }
+
+    100% {
+        transform: translateX(0%) rotate(0deg);
+    }
+
+}
+
+@keyframes shakee {
+    0% {
+        transform: translateX(0%) rotate(-40deg);
+    }
+
+    25% {
+        transform: translateX(3%) rotate(-35deg);
+    }
+
+    50% {
+        transform: translateX(-3%)rotate(-40deg);
+
+    }
+
+    75% {
+        transform: translateX(3%) rotate(-35deg);
+
+    }
+
+    100% {
+        transform: translateX(0%) rotate(-40deg);
+    }
+
+}
+
+.right-panel img.door {
+    position: relative;
+    left: 350px;
+    width: 400px;
+    top: 80px;
+}
+
+.left-panel img.door2 {
+    position: absolute;
+    left: 350px;
+    width: 400px;
+    bottom: 50px;
+}
+
+.fairyy.small {
+    width: 300px;
+}
+
+.phone2.small {
+    width: 300px;
+    left: 100px;
+    bottom: 150px;
+}
+
+.chat.small {
+    width: 200px;
+    left: 280px;
+    bottom: 200px;
+}
+
+.left-panel img.door2.small {
+    position: absolute;
+    width: 200px;
+    left: 400px;
+    bottom: 25px;
+}
+
+.cappu {
+    position: absolute;
+    left: -50px;
+    top: 100px;
+}
+
+.chat2 {
+    position: absolute;
+    left: 350px;
+    top: 50px;
+    width: 200px;
+}
+
+.phone3 {
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    width: 300px;
+    animation: shakee 3s infinite;
+}
+
+.left-bottom img.door3 {
+    position: absolute;
+    left: 400px;
+    top: 250px;
+    width: 200px;
 }
