@@ -107,6 +107,7 @@ body.bed {
 
 .pillow {
     width: 700px;
+    top: 100px;
     position: relative;
 }
 
@@ -191,7 +192,7 @@ body.fairy-page {
 .phone2 {
     position: absolute;
     left: 120px;
-    bottom: 500px;
+    bottom: 600px;
     animation: shakee 3s infinite;
 }
 
@@ -304,7 +305,7 @@ body.fairy-page {
 
 .phone3 {
     position: absolute;
-    left: 150px;
+    left: 70px;
     top: 0px;
     width: 300px;
     animation: shakee 3s infinite;
@@ -315,4 +316,26 @@ body.fairy-page {
     left: 400px;
     top: 250px;
     width: 200px;
+}
+
+.phone4 {
+    position: absolute;
+    transform: rotate(180deg);
+    bottom: 0px;
+    right: 350px;
+    width: 500px;
+}
+
+.chat3 {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 450px;
+}
+
+.open {
+    position: absolute;
+    bottom: 350px;
+    width: 200px;
+    left: 400px;
 }
