@@ -191,15 +191,20 @@ body.fairy-page {
 
 .phone2 {
     position: absolute;
-    left: 120px;
-    bottom: 600px;
+    /* left: 120px; */
+    /* bottom: 600px; */
+    left: 10vw;
+    bottom: 65vh;
     animation: shakee 3s infinite;
 }
 
 .chat {
-    width: 400px;
-    left: 300px;
-    bottom: 500px;
+    /* width: 400px; */
+    /* left: 300px;
+    bottom: 500px; */
+    width: 25vw;
+    left: 22vw;
+    bottom: 65vh;
     position: absolute;
 }
 
@@ -262,75 +267,106 @@ body.fairy-page {
 
 .left-panel img.door2 {
     position: absolute;
-    left: 350px;
+    /* left: 350px;
     width: 400px;
-    bottom: 50px;
+    bottom: 50px; */
+    left: 25vw;
+    width: 27vw;
+    bottom: 17vh;
 }
 
 .fairyy.small {
-    width: 300px;
+    /* width: 300px; */
+    width: 20vw;
 }
 
 .phone2.small {
-    width: 300px;
+    /* width: 300px;
     left: 100px;
-    bottom: 150px;
+    bottom: 150px; */
+    width: 20vw;
+    left: 8vw;
+    bottom: 15vh;
 }
 
 .chat.small {
-    width: 200px;
+    /* width: 200px;
     left: 280px;
-    bottom: 200px;
+    bottom: 200px; */
+    width: 12vw;
+    left: 25vw;
+    bottom: 20vh;
 }
 
 .left-panel img.door2.small {
     position: absolute;
-    width: 200px;
+    /* width: 200px;
     left: 400px;
-    bottom: 25px;
+    bottom: 25px; */
+    width: 12vw;
+    left: 35vw;
+    bottom: 2vh;
 }
 
 .cappu {
     position: absolute;
-    left: -50px;
-    top: 100px;
+    /* left: -50px;
+    top: 100px; */
+    left: 2vw;
+    top: 10vh;
+    width: 15vw;
 }
 
 .chat2 {
     position: absolute;
-    left: 350px;
+    /* left: 350px;
     top: 50px;
-    width: 200px;
+    width: 200px; */
+    left: 20vw;
+    top: 5vh;
+    width: 12vw;
 }
 
 .phone3 {
     position: absolute;
-    left: 70px;
+    /* left: 70px;
     top: 0px;
-    width: 300px;
+    width: 300px; */
+    left: 7vw;
+    top: 0vh;
+    width: 20vw;
     animation: shakee 3s infinite;
 }
 
 .left-bottom img.door3 {
     position: absolute;
-    left: 400px;
+    /* left: 400px;
     top: 250px;
-    width: 200px;
+    width: 200px; */
+    left: 35vw;
+    top: 25vh;
+    width: 12vw;
 }
 
 .phone4 {
     position: absolute;
     transform: rotate(180deg);
-    bottom: 0px;
+    /* bottom: 0px;
     right: 350px;
-    width: 500px;
+    width: 500px; */
+    bottom: 0vh;
+    right: 23vw;
+    width: 30vw;
 }
 
 .chat3 {
     position: absolute;
-    bottom: 50px;
+    /* bottom: 50px;
     left: 50px;
-    width: 450px;
+    width: 450px; */
+    bottom: 10vh;
+    left: 5vw;
+    width: 28vw;
 }
 
 .open {
