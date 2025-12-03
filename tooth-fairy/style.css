@@ -375,3 +375,19 @@ body.fairy-page {
     width: 200px;
     left: 400px;
 }
+
+.fairyyy {
+    width: 200px;
+    top: 50px;
+}
+
+.open {
+    width: 400px;
+    bottom: 10px;
+}
+
+.right-panel img.open2 {
+    width: 400px;
+    left: 300px;
+    top: 100px;
+}

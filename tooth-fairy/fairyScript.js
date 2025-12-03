@@ -26,6 +26,9 @@ function chatt() {
         chat.onclick = splitPanel;
     }
 }
+
+let hasClicked = false;
+
 function splitPanel() {
     let leftTop = document.querySelector(".left-top");
     let leftBottom = document.querySelector(".left-bottom");
@@ -36,11 +39,12 @@ function splitPanel() {
     leftBottom.style.display = "block";
     leftBottom.style.flex = "1";
 
-    document.querySelector(".cappu").style.display = "block";
-    document.querySelector(".chat2").style.display = "block";
-    document.querySelector(".phone3").style.display = "block";
-    document.querySelector(".door3").style.display = "block";
-
+    if (!hasClicked) {
+        document.querySelector(".cappu").style.display = "block";
+        document.querySelector(".chat2").style.display = "block";
+        document.querySelector(".phone3").style.display = "block";
+        document.querySelector(".door3").style.display = "block";
+    }
 
     // smallerrr
     document.querySelector(".fairyy").className += " small";
@@ -60,6 +64,7 @@ function audio() {
 }
 
 function bigChat() {
+    hasClicked = true;
     let chat3 = document.querySelector(".chat3")
     chat3.style.display = "block";
     let phone4 = document.querySelector(".phone4")
@@ -84,4 +89,30 @@ audio();
 function murmurr() {
     let murmur = document.querySelector("#murmur");
     murmur.play();
+    murmur.onended = function () {
+        let leftBottom = document.querySelector(".left-bottom");
+        leftBottom.style.display = "none";
+        let leftTop = document.querySelector(".left-top");
+        leftTop.style.borderBottom = "none";
+        leftTop.style.flex = "0";
+        leftTop.style.display = "none";
+        let fairyyy = document.querySelector(".fairyyy");
+        fairyyy.style.display = "block";
+        let open = document.querySelector(".open");
+        open.style.display = "block"
+        let door = document.querySelector(".door")
+        door.style.display = "none";
+        let open2 = document.querySelector(".open2");
+        open2.style.display = "block"
+    };
+}
+
+function dropHandler(ev) {
+    ev.preventDefault();
+    console.log("dropped!");
+    let fair = documen.querySelector(".fairyyy")
+
+    fair.style.cursor = "pointer";
+
+    document.querySelector(".open").append(fair);
 }
