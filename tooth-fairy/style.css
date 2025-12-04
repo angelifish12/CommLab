@@ -3,6 +3,8 @@ body.first {
     margin: 0px;
     padding: 20px;
     min-height: 25000px;
+    overflow: hidden;
+    /* freeze the screen*/
 }
 
 .teeth {
@@ -138,6 +140,8 @@ body.bed {
 
 .open2-hidden {
     display: none;
+    cursor: pointer;
+    z-index: 50;
 }
 
 .phone-hidden {
@@ -405,7 +409,7 @@ body.magic {
 .magic-pillow {
     position: absolute;
     width: 300px;
-    cursor: pointer;
+    cursor: grab;
     z-index: 2;
 }
 

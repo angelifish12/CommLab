@@ -15,6 +15,7 @@ function startFalling() {
     console.log("start falling");
     if (isFalling == false) {
         isFalling = true;
+        document.body.style.overflow = "scroll";
         // hide special healthy tooth
         sadTooth.style.visibility = "hidden";
 

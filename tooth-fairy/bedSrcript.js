@@ -244,9 +244,11 @@ function dropFairy(ev) {
     fairyRight.style.position = "absolute";
     fairyRight.style.left = "969%";
     fairyRight.style.bottom = "0px";
-    fairyRight.style.height = "290px";
+    fairyRight.style.height = "350px";
+    fairyRight.style.width = "auto";
     fairyRight.draggable = true;
-    fairyRight.style.cursor = "pointer";
+    fairyRight.style.cursor = "grab";
+    fairyRight.style.zIndex = "100";
     fairyRight.addEventListener("dragstart", draggingStarted);
     fairyRight.addEventListener("dragend", draggingEnded);
     document.body.append(fairyRight);
