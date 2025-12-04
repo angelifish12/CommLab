@@ -13,28 +13,16 @@ sadTooth.addEventListener("click", startFalling);
 
 function startFalling() {
     console.log("start falling");
-    console.log("isFalling BEFORE:", isFalling);
     if (isFalling == false) {
         isFalling = true;
-        // hide sepcial healthy tooth
+        // hide special healthy tooth
         sadTooth.style.visibility = "hidden";
 
-        // revela special falling tooth
+        // reveal special falling tooth
         sadTooth = document.querySelector(".special.falling");
         sadTooth.style.display = "block";
         sadTooth.style.top = "200px";
-        // sadTooth.style.top = toothTop + "px"
         sadTooth.style.animation = "shake 3s infinite";
-        // let scream = document.querySelector("#scream");
-        // scream.play();
-
-        // console.log("isFalling AFTER:", isFalling);
-        // sadTooth.style.position = "fixed";
-        // toothTop = 100;
-        // sadTooth.style.top = toothTop + "px";
-        // sadTooth.style.left = "50%";
-        // sadTooth.style.margin = "0";
-        // sadTooth.style.transform = "translateX(-50%)";
     }
 }
 
@@ -48,9 +36,10 @@ function stopFalling() {
     hand.style.top = toothTop + "px";
     hand.style.right = "800px";
     hand.style.width = "800px";
-    hand.style.cursor = "pointer";
-    hand.onclick = bed;
     document.body.append(hand);
+    setTimeout(function () {
+        document.location = "bed.html";
+    }, 3000);
 }
 
 function bed() {
@@ -66,7 +55,6 @@ function getScrollPercentage() {
 
 function tooth() {
     let a1 = document.createElement("a");
-    // a1.innerHTML = ;
     a1.className = "tooth";
     a1.onclick = toothClicked;
     let rTop = Math.random() * 800;
@@ -77,8 +65,6 @@ function tooth() {
 }
 
 function updateFalling() {
-    console.log("UPDATE FALLING CALLED! isFalling:", isFalling, "toothTop:", toothTop);
-
     if (isFalling) {
         let percentage = getScrollPercentage();
         let toothTop = 200 + (percentage * 3);

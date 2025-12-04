@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+#horizontalWrapper{
+    width: 1000vw;
+    display: flex;
+    
+}
+.windowSize{
+    width: 100vw;
+    height: 100vh;
+    outline: 7px red dotted;
+    outline-offset: -5px;
+    display: inline-block;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.scroll-arrows{
+    display: none;
+}

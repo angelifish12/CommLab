@@ -106,13 +106,16 @@ function murmurr() {
         open2.style.display = "block"
     };
 }
-
+function dragoverHandler(ev) {
+    ev.preventDefault();
+}
 function dropHandler(ev) {
     ev.preventDefault();
     console.log("dropped!");
-    let fair = documen.querySelector(".fairyyy")
+    let fairyyy = document.querySelector(".fairyyy")
 
-    fair.style.cursor = "pointer";
+    fairyyy.style.display = "none";
 
-    document.querySelector(".open").append(fair);
+    let fairyRight = document.querySelector(".fairy-right");
+    fairyRight.style.display = "block";
 }
