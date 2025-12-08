@@ -1,13 +1,10 @@
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-}
-
 let reachedRightSide = false;
 let reachedLeftSide = true;
 let ringPlayed = false;
-let murmurPlayed = false;
+let phone3Clicked = false;
 let fairyMoving = false;
 let fairyStartScroll = 0;
+let fairyDroppedLeft = false; // Track if fairy was dropped on left door
 
 function getScrollPercentageHorizontal() {
     let scrollLeft = document.documentElement.scrollLeft;
@@ -18,25 +15,50 @@ function getScrollPercentageHorizontal() {
 
 window.addEventListener("scroll", function () {
     let scrollSoFar = window.scrollX;
-    let possibleScrollDistance = document.body.scrollWidth - window.innerWidth;
+    let possibleScrollDistance = document.body.scrollWidth - window.innerHeight;
     let perc = scrollSoFar / possibleScrollDistance;
 
+    // prevent scrolling to the first 2 windows after it rings UNLESS fairy was dropped on left
+    if (ringPlayed && !fairyDroppedLeft) {
+        let minScroll = possibleScrollDistance * 0.2;
+        if (scrollSoFar < minScroll) {
+            document.documentElement.scrollLeft = minScroll;
+            return;
+        }
+    }
+
     // fairy move as user scrolls left
-    if (fairyMoving && murmurPlayed) {
-        let fairy = document.querySelector(".fairy-hidden");
+    if (fairyMoving && phone3Clicked) {
+        let fairy = document.querySelector(".fairy");
         if (fairy) {
             let scrollDiff = fairyStartScroll - scrollSoFar;
-            let fairyNewLeft = 960 - (scrollDiff * 0.07);
-            fairy.style.left = fairyNewLeft + "%";
+            let fairyLeft = 960 - (scrollDiff * 0.07);
+            fairy.style.left = fairyLeft + "%";
 
-            if (fairyNewLeft <= 270) {
+            if (fairyLeft <= 270) {
                 fairyMoving = false;
                 fairy.style.left = "270%";
                 fairy.style.animation = "none";
                 fairy.draggable = true;
-                fairy.style.cursor = "pointer";
+                fairy.style.cursor = "grab";
                 fairy.addEventListener("dragstart", draggingStarted);
                 fairy.addEventListener("dragend", draggingEnded);
+
+                // when fairy reaches cappu, hide door and phone, show open
+                let doors = document.querySelectorAll(".door");
+                doors.forEach(function (door) {
+                    door.style.display = "none";
+                });
+
+                let opens = document.querySelectorAll(".open");
+                opens.forEach(function (open) {
+                    open.style.display = "block";
+                });
+
+                let phones = document.querySelectorAll(".phone");
+                phones.forEach(function (phone) {
+                    phone.style.display = "none";
+                });
             }
         }
     }
@@ -49,79 +71,107 @@ window.addEventListener("scroll", function () {
         document.querySelector(".scroll-arrowsl").style.display = "block";
         document.querySelector(".scroll-arrowsr").style.display = "none";
 
-        // after ring played, fairy, phone3, door2 on right side
-        if (ringPlayed) {
-            let phones2 = document.querySelectorAll(".phone2-hidden");
+        // after ring played, fairy, phone3 on right side (NO door2)
+        // BUT only show fairy if it hasn't been dropped on left yet
+        if (ringPlayed && !fairyDroppedLeft) {
+            let phones2 = document.querySelectorAll(".phone2");
             phones2.forEach(function (phone2) {
                 phone2.style.display = "none";
             });
 
-            let fairies = document.querySelectorAll(".fairy-hidden");
+            let fairies = document.querySelectorAll(".fairy");
             fairies.forEach(function (fairy) {
                 fairy.style.display = "block";
             });
 
-            let phones3 = document.querySelectorAll(".phone3-hidden");
+            let phones3 = document.querySelectorAll(".phone3");
             phones3.forEach(function (phone3) {
                 phone3.style.display = "block";
             });
+        }
 
-            let doors2 = document.querySelectorAll(".door2-hidden");
-            doors2.forEach(function (door2) {
-                door2.style.display = "block";
+        // Hide fairy on right if already dropped on left
+        if (fairyDroppedLeft) {
+            let fairies = document.querySelectorAll(".fairy");
+            fairies.forEach(function (fairy) {
+                fairy.style.display = "none";
             });
         }
 
-        // after murmur played, open2 appear
-        if (murmurPlayed) {
-            let doors2 = document.querySelectorAll(".door2-hidden");
-            doors2.forEach(function (door2) {
-                door2.style.display = "none";
-            });
-
-            let phones = document.querySelectorAll(".phone-hidden");
+        // after phone3 clicked (NO open2 on right)
+        if (phone3Clicked) {
+            let phones = document.querySelectorAll(".phone");
             phones.forEach(function (phone) {
                 phone.style.display = "none";
             });
 
-            let opens2 = document.querySelectorAll(".open2-hidden");
-            opens2.forEach(function (open2) {
-                open2.style.display = "block";
-            });
-
-            let phones3 = document.querySelectorAll(".phone3-hidden");
+            let phones3 = document.querySelectorAll(".phone3");
             phones3.forEach(function (phone3) {
                 phone3.style.display = "none";
             });
         }
     }
 
-    if (perc < .05 && reachedLeftSide == false) {
+    // the threshold
+    let lefttt;
+    if (ringPlayed && !fairyDroppedLeft) {
+        lefttt = 0.22;
+    } else {
+        lefttt = 0.05;
+    }
+
+    if (perc < lefttt && reachedLeftSide == false) {
         console.log("reached the left side")
         reachedLeftSide = true;
         reachedRightSide = false;
         document.querySelector(".scroll-arrowsr").style.display = "block";
         document.querySelector(".scroll-arrowsl").style.display = "none";
 
-        // after ring played, door appear
-        if (ringPlayed) {
-            let doors = document.querySelectorAll(".door-hidden");
+        // after ring played, door appear (but not if fairy already dropped)
+        if (ringPlayed && !fairyDroppedLeft) {
+            let doors = document.querySelectorAll(".door");
             doors.forEach(function (door) {
                 door.style.display = "block";
             });
         }
 
-        // after murmur played, open appear
-        if (murmurPlayed) {
-            let doors = document.querySelectorAll(".door-hidden");
+        // after phone3 clicked, open appear
+        if (phone3Clicked && !fairyDroppedLeft) {
+            let doors = document.querySelectorAll(".door");
             doors.forEach(function (door) {
                 door.style.display = "none";
             });
 
-            let opens = document.querySelectorAll(".open-hidden");
+            let opens = document.querySelectorAll(".open");
             opens.forEach(function (open) {
                 open.style.display = "block";
             });
+        }
+
+        // Show open2 and fairy at pillow position if fairy was dropped on left
+        if (fairyDroppedLeft) {
+            // Hide the original door/open
+            let doors = document.querySelectorAll(".door");
+            doors.forEach(function (door) {
+                door.style.display = "none";
+            });
+
+            let opens = document.querySelectorAll(".open");
+            opens.forEach(function (open) {
+                open.style.display = "none";
+            });
+
+            // Show open2 at pillow
+            let opens2 = document.querySelectorAll(".open2");
+            opens2.forEach(function (open2) {
+                open2.style.display = "block";
+            });
+
+            // Show fairy at pillow
+            let fairyAtPillow = document.querySelector(".fairy-at-pillow");
+            if (fairyAtPillow) {
+                fairyAtPillow.style.display = "block";
+            }
         }
     }
 })
@@ -152,7 +202,7 @@ function dropHandler(ev) {
     draggedPillow.style.position = "absolute";
     draggedPillow.style.left = "300px";
     draggedPillow.style.top = "100px";
-    draggedPillow.style.cursor = "pointer";
+    draggedPillow.style.cursor = "grab";
     draggedPillow.style.zIndex = 10;
     draggedPillow.draggable = false;
 
@@ -164,7 +214,6 @@ function dropHandler(ev) {
 
 function pillowPlaced() {
     document.querySelector(".scroll-arrowsr").style.display = "block";
-    // unlock
     document.body.style.overflowX = "scroll";
     document.body.style.overflowY = "hidden";
 
@@ -178,40 +227,48 @@ function pillowPlaced() {
         candy.style.display = "block";
     })
 
-    let cappus = document.querySelectorAll(".cappu-hidden");
+    let cappus = document.querySelectorAll(".cappu");
     cappus.forEach(function (cappu) {
         cappu.style.display = "block";
         cappu.style.cursor = "pointer";
     });
 
-    let phones = document.querySelectorAll(".phone-hidden");
+    let phones = document.querySelectorAll(".phone");
     phones.forEach(function (phone) {
         phone.style.display = "block";
         phone.style.cursor = "pointer";
-        phone.addEventListener("click", murmurr);
+        phone.addEventListener("click", playMurmur);
     })
 
-    let phones2 = document.querySelectorAll(".phone2-hidden");
+    let phones2 = document.querySelectorAll(".phone2");
     phones2.forEach(function (phone2) {
         phone2.style.display = "block";
         phone2.style.cursor = "pointer";
         phone2.addEventListener("click", ringg);
     });
+
+    let bgm = document.querySelector("#bgm");
+    bgm.play();
+
+    let info = document.querySelector(".info");
+    info.style.display = "block"
 }
 
-function murmurr(event) {
+function playMurmur() {
     let murmur = document.querySelector("#murmur");
     murmur.play();
-    murmurPlayed = true;
+}
 
-    // if click on phone3, fairy starts movement
-    if (event.target.classList.contains("phone3-hidden")) {
-        fairyMoving = true;
-        fairyStartScroll = window.scrollX;
-        let fairy = document.querySelector(".fairy-hidden");
-        if (fairy) {
-            fairy.style.animation = "flying 1s infinite ease-in-out";
-        }
+function phone3Click() {
+    let murmur = document.querySelector("#murmur");
+    murmur.play();
+
+    phone3Clicked = true;
+    fairyMoving = true;
+    fairyStartScroll = window.scrollX;
+    let fairy = document.querySelector(".fairy");
+    if (fairy) {
+        fairy.style.animation = "flying 1s infinite ease-in-out";
     }
 }
 
@@ -220,43 +277,71 @@ function ringg() {
     ring.play();
     ringPlayed = true;
 
-    // Add phone3 ring
-    let phones3 = document.querySelectorAll(".phone3-hidden");
+    let birds = document.querySelectorAll(".bird");
+    birds.forEach(function (bird) {
+        bird.style.display = "block";
+    });
+
+    let phones3 = document.querySelectorAll(".phone3");
     phones3.forEach(function (phone3) {
         phone3.style.cursor = "pointer";
-        phone3.addEventListener("click", murmurr);
+        phone3.addEventListener("click", phone3Click);
     });
 }
 
 function dropFairy(ev) {
     ev.preventDefault();
-    console.log("Fairy dropped!");
+    console.log("Fairy dropped on left door!");
 
-    let fairy = document.querySelector(".fairy-hidden");
+    fairyDroppedLeft = true; // Mark that fairy was dropped
+
+    let fairy = document.querySelector(".fairy");
     if (fairy) {
         fairy.style.display = "none";
+
+        let birds = document.querySelectorAll(".bird2");
+        birds.forEach(function (bird2) {
+            bird2.style.display = "block";
+        });
+
+        let birds2 = document.querySelectorAll(".bird");
+        birds2.forEach(function (bird1) {
+            bird1.style.display = "none";
+        });
     }
 
-    // fairy at the right door
-    let fairyRight = document.createElement("img");
-    fairyRight.src = "assets/toothfairy.gif";
-    fairyRight.className = "right-fairy";
-    fairyRight.style.position = "absolute";
-    fairyRight.style.left = "969%";
-    fairyRight.style.bottom = "0px";
-    fairyRight.style.height = "350px";
-    fairyRight.style.width = "auto";
-    fairyRight.draggable = true;
-    fairyRight.style.cursor = "grab";
-    fairyRight.style.zIndex = "100";
-    fairyRight.addEventListener("dragstart", draggingStarted);
-    fairyRight.addEventListener("dragend", draggingEnded);
-    document.body.append(fairyRight);
+    // Create fairy at pillow position (left side)
+    let fairyAtPillow = document.createElement("img");
+    fairyAtPillow.src = "assets/toothfairy.gif";
+    fairyAtPillow.className = "fairy-at-pillow";
+    fairyAtPillow.style.position = "absolute";
+    fairyAtPillow.style.left = "350px";
+    fairyAtPillow.style.top = "200px";
+    fairyAtPillow.style.height = "200px";
+    fairyAtPillow.style.width = "auto";
+    fairyAtPillow.draggable = true;
+    fairyAtPillow.style.cursor = "grab";
+    fairyAtPillow.style.zIndex = "100";
+    fairyAtPillow.style.display = "none"; // Hidden until scroll back
+    fairyAtPillow.addEventListener("dragstart", draggingStarted);
+    fairyAtPillow.addEventListener("dragend", draggingEnded);
+
+    let firstWindow = document.querySelector(".windowSize");
+    firstWindow.append(fairyAtPillow);
 }
 
-function dropFairyRight(ev) {
+function dropFairyToOpen2(ev) {
     ev.preventDefault();
+    console.log("Fairy dropped on open2 - going to magic!");
     document.location = "magic.html";
+}
+
+function openCharacterOverlay() {
+    document.querySelector(".character").style.display = "flex";
+}
+
+function closeCharacterOverlay() {
+    document.querySelector(".character").style.display = "none";
 }
 
 console.log("hi")

@@ -11,8 +11,14 @@ sparkle.addEventListener("click", function () {
         // show pillow & coin
         coin.style.display = "block";
         magicPillow.style.display = "block";
+        back();
     });
 });
+
+
+function back() {
+    document.location = "index.html"
+}
 
 function draggingStarted(ev) {
     ev.target.classList.add("hide");
@@ -20,6 +26,7 @@ function draggingStarted(ev) {
 
 function draggingEnded(ev) {
     ev.target.classList.remove("hide");
+    victory.play();
 }
 magicPillow.addEventListener("dragstart", draggingStarted);
 magicPillow.addEventListener("dragend", function (ev) {

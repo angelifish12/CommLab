@@ -6,19 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tooth Fairy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
     <script src="bedSrcript.js" defer></script>
 </head>
 
 
 <body class="bed">
+    <img class="info" src="assets/info.gif" style="display: none;" onclick="openCharacterOverlay()">
     <div class="windowSize">
         <div class="pillowCase">
-            <img class="pillow" src="assets/pillow.gif" style="cursor: pointer;" draggable="true"
+            <img class="pillow" src="assets/pillow.gif" style="cursor: grab;" draggable="true"
                 ondragstart="draggingStarted(event)" ondragend="draggingEnded(event)">
         </div>
         <p class="scroll-arrowsr">↠</p>
         <p class="scroll-arrowsl">↞</p>
+        <!-- open2 near pillow -->
+        <img src="assets/open.gif" class="open2"
+            style="position: absolute; bottom: 0px; left: 350px; height: 290px; display: none;"
+            ondrop="dropFairyToOpen2(event)" ondragover="dragoverHandler(event)">
     </div>
+    <div class="scroll-blocker"
+        style="position: absolute; left: 0; top: 0; width: 230vw; height: 100vh; pointer-events: none;"></div>
     <div class="windowSize"><img class="tooth" src="assets/tooth.gif" draggable="false"></div>
     <div class="windowSize">
         <img src="assets/tree.gif" class="tree" style="position: absolute; bottom: 0; left: 193%; height: 200px;">
@@ -27,25 +37,29 @@
         <img src="assets/tree3.gif" class="tree" style="position: absolute; bottom: 0; left: 270%; height: 290px;">
         <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 280px; left: 470%; height: 205px;">
         <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 295px; left: 270%; height: 205px;">
-        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 350px; left: 175%; height: 290px;">
+        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 350px; left: 175%; height: 284px;">
         <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 293px; left: 190%; height: 230px;">
         <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 390px; left: 440%; height: 210px;">
         <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 454px; left: 341%; height: 350px;">
         <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 280px; left: 220%; height: 390px;">
-        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 310px; left: 210%; height: 290px;">
-        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 320px; left: 320%; height: 290px;">
-        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 295px; left: 340%; height: 290px;">
+        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 310px; left: 210%; height: 224px;">
+        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 320px; left: 320%; height: 282px;">
+        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 295px; left: 340%; height: 320px;">
+        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 454px; left: 395%; height: 350px;">
+        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 280px; left: 450%; height: 324px;">
+        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 310px; left: 496%; height: 310px;">
+        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 320px; left: 362%; height: 240px;">
+        <img src="assets/cloud.gif" class="tree" style="position: absolute; bottom: 295px; left: 390%; height: 390px;">
         <!-- first time scroll cappu and phone -->
-        <img src="assets/cappu.gif" class="cappu-hidden"
-            style="position: absolute; bottom: 0px; left: 260%; height: 290px;">
-        <img src="assets/phone2.gif" class="phone-hidden"
+        <img src="assets/cappu.gif" class="cappu" style="position: absolute; bottom: 0px; left: 260%; height: 290px;">
+        <img src="assets/phone2.gif" class="phone"
             style="position: absolute; bottom: 100px; left: 269%; height: 290px;">
-        <img src="assets/doorr.gif" class="door-hidden"
-            style="position: absolute; bottom: 0px; left: 280%; height: 290px;">
-        <img src="assets/open.gif" class="open-hidden"
-            style="position: absolute; bottom: 0px; left: 280%; height: 290px;" ondrop="dropFairy(event)"
-            ondragover="dragoverHandler(event)">
+        <img src="assets/doorr.gif" class="door" style="position: absolute; bottom: 0px; left: 280%; height: 290px;">
+        <img src="assets/open.gif" class="open" style="position: absolute; bottom: 0px; left: 280%; height: 290px;"
+            ondrop="dropFairy(event)" ondragover="dragoverHandler(event)">
+        <img src="assets/bird2.gif" class="bird2" style="position: absolute; bottom: 450px; left: 265%;">
         <audio id="murmur" src="assets/murmur.mp3"></audio>
+        <audio id="bgm" src="assets/bgm.mp3"></audio>
     </div>
     <div class="windowSize">
         <img src="assets/tree2.gif" class="tree" style="position: absolute; bottom: 0; left: 320%; height: 210px;">
@@ -99,6 +113,9 @@
         <img src="assets/pink.gif" class="candy" style="position: absolute; bottom: 350px; left: 590%; height: 290px;">
         <img src="assets/purple.gif" class="candy"
             style="position: absolute; bottom: 280px; left: 668%; height: 300px;">
+        <img src="assets/pink.gif" class="candy" style="position: absolute; bottom: 324px; left: 555%; height: 220px;">
+        <img src="assets/purple.gif" class="candy"
+            style="position: absolute; bottom: 280px; left: 668%; height: 500px;">
     </div>
     <div class="windowSize"> <img src="assets/lolipop.gif" class="candy"
             style="position: absolute; bottom: 0; left: 670%; height: 200px;">
@@ -113,6 +130,12 @@
         <img src="assets/candy.gif" class="candy" style="position: absolute; bottom: 0; left: 770%; height: 220px;">
         <img src="assets/candy2.gif" class="candy" style="position: absolute; bottom: 0; left: 690%; height: 250px;">
         <img src="assets/candy3.gif" class="candy" style="position: absolute; bottom: 0; left: 549%; height: 203px;">
+        <img src="assets/lolipop.gif" class="candy" style="position: absolute; bottom: 0; left: 830%; height: 250px;">
+        <img src="assets/lolipop2.gif" class="candy" style="position: absolute; bottom: 0; left: 896%; height: 360px;">
+        <img src="assets/lolipop3.gif" class="candy" style="position: absolute; bottom: 0; left: 884%; height: 220px;">
+        <img src="assets/candy.gif" class="candy" style="position: absolute; bottom: 0; left: 855%; height: 234px;">
+        <img src="assets/candy2.gif" class="candy" style="position: absolute; bottom: 0; left: 870%; height: 254px;">
+        <img src="assets/candy3.gif" class="candy" style="position: absolute; bottom: 0; left: 859%; height: 233px;">
         <img src="assets/pink.gif" class="candy" style="position: absolute; bottom: 282px; left: 640%; height: 210px;">
         <img src="assets/purple.gif" class="candy"
             style="position: absolute; bottom: 281px; left: 940%; height: 240px;">
@@ -125,21 +148,42 @@
         <img src="assets/pink.gif" class="candy" style="position: absolute; bottom: 350px; left: 720%; height: 300px;">
         <img src="assets/purple.gif" class="candy"
             style="position: absolute; bottom: 280px; left: 745%; height: 200px;">
-        <img src="assets/toothfairy.gif" class="fairy-hidden"
+        <img src="assets/toothfairy.gif" class="fairy"
             style="position: absolute; bottom: 250px; left: 960%; height: 200px;">
-        <img src="assets/phone.gif" class="phone2-hidden"
+        <img src="assets/phone.gif" class="phone2"
             style="position: absolute; bottom: 250px; left: 965%; height: 200px;">
-        <img src="assets/phone2.gif" class="phone3-hidden"
+        <img src="assets/phone2.gif" class="phone3"
             style="position: absolute; bottom: 250px; left: 967%; height: 200px;">
-        <img src="assets/doorr.gif" class="door2-hidden"
-            style="position: absolute; bottom: 0px; left: 969%; height: 290px;">
-        <img src="assets/open.gif" class="open2-hidden"
-            style="position: absolute; bottom: 0px; left: 969%; height: 290px;" ondrop="dropFairyRight(event)"
-            ondragover="dragoverHandler(event)">
+        <img src="assets/bird.gif" class="bird" style="position: absolute; bottom: 550px; left: 900%;">
         <audio id="ring" src="assets/ring.mp3"></audio>
     </div>
     <div class="windowSize"></div>
     <div class="tooth-box" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+
+    <!-- Character overlay - hidden by default -->
+    <div class="character" style="display: none;">
+        <button class="home-button" onclick="closeCharacterOverlay()">🦷</button>
+        <h1>Characters</h1>
+        <div class="character-box">
+            <img class="fairy2" src="assets/character1.gif">
+            <div class="hover-text">She loves collecting children's teeth! They're filled with magic that lets her
+                transform
+                each one into a shiny coin.</div>
+        </div>
+
+        <div class="character-box">
+            <img class="cappu2" src="assets/cappu2.gif">
+            <div class="hover-text">He is the Tooth Fairy's #1 assistant! He hides inside children's mouth, and the
+                moment a
+                tooth falls out, he alerts the Tooth Fairy right away. There's nothing he doesn't know.</div>
+        </div>
+
+        <div class="character-box">
+            <img class="bird3" src="assets/bird3.gif">
+            <div class="hover-text">He is the magical messenger who helps children find the Tooth Fairy and
+                Cappu.</div>
+        </div>
+    </div>
 </body>
 
 </html>

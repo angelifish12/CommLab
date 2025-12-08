@@ -38,6 +38,16 @@ function stopFalling() {
     hand.style.right = "800px";
     hand.style.width = "800px";
     document.body.append(hand);
+    // cappu spotting
+    let spotted = document.createElement("img");
+    spotted.src = "assets/spotted.gif";
+    spotted.style.position = "fixed";
+    spotted.style.top = "50%";
+    spotted.style.right = "50px";
+    spotted.style.width = "300px";
+    spotted.style.opacity = "0.7";
+    spotted.style.transform = "translateY(-50%)";
+    document.body.append(spotted);
     setTimeout(function () {
         document.location = "bed.html";
     }, 3000);
@@ -73,19 +83,23 @@ function updateFalling() {
         console.log(toothTop)
         toothTop = toothTop + 0.3;
         sadTooth.style.top = toothTop + "px";
-        if (toothTop > 300 && stage == 1) {
+        if (toothTop > 200 && stage == 1) {
             console.log("Changing to jump.gif");
             sadTooth.src = "assets/jump.gif";
             stage = 2;
             let scream = document.querySelector("#scream");
             scream.play();
-        } else if (toothTop > 500 && stage == 2) {
+        } else if (toothTop > 300 && stage == 2) {
             console.log("Changing to jumpp.gif");
             sadTooth.src = "assets/jumpp.gif";
             stage = 3;
             sadTooth.onclick = stopFalling;
+        } else if (toothTop > 500 && stage == 3) {
+            sadTooth.src = "assets/landing.gif";
+            sadTooth.style.animation = "none";
+            stage = 4;
+            sadTooth.onclick = stopFalling;
         }
     }
 }
-
 
