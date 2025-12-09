@@ -96,9 +96,11 @@ function updateFalling() {
             sadTooth.onclick = stopFalling;
         } else if (toothTop > 500 && stage == 3) {
             sadTooth.src = "assets/landing.gif";
+            scream.pause();
             sadTooth.style.animation = "none";
             stage = 4;
             sadTooth.onclick = stopFalling;
+            document.body.style.overflow = "hidden";
         }
     }
 }
