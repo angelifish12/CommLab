@@ -20,13 +20,13 @@ window.addEventListener("scroll", function () {
 
     // snoring audio 
     let snoring = document.querySelector("#snoring");
-    if (snoring && !snoring.paused) { // Only control if it's already playing
-        if (perc >= 0.1) { // Left first window
+    if (snoring && !snoring.paused) { // only control if its already playing
+        if (perc >= 0.1) { // left first window
             snoring.pause();
         }
     } else if (snoring && snoring.paused && perc < 0.1) {
         // only resume if we're back in first window and it was playing before
-        if (snoring.currentTime > 0) { // Has been played before
+        if (snoring.currentTime > 0) { // has been played before
             snoring.play();
         }
     }
@@ -363,6 +363,9 @@ function dropFairy(ev) {
             bird1.style.display = "none";
         });
     }
+
+    let enter = document.querySelector("#enter");
+    enter.play();
 
     //  fairy at pillow
     let fairyAtPillow = document.createElement("img");
