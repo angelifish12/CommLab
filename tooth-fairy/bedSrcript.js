@@ -227,6 +227,8 @@ function pillowPlaced() {
         tree.style.cursor = "pointer";
         tree.addEventListener("click", function () {
             tree.classList.add("shrinking");
+            let bounce = document.querySelector("#bounce");
+            bounce.play();
             setTimeout(function () {
                 tree.classList.remove("shrinking");
             }, 500);

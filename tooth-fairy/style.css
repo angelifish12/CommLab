@@ -134,7 +134,7 @@ body.bed {
     }
 
     50% {
-        transform: scaleY(0.8);
+        transform: scaleY(0.9);
     }
 
     100% {
