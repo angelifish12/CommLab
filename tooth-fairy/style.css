@@ -119,6 +119,31 @@ body.bed {
 
 .tree {
     display: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: bottom;
+}
+
+.tree.shrinking {
+    animation: shrink 0.5s ease-in-out;
+}
+
+@keyframes shrink {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.8);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.cloud {
+    display: none;
 }
 
 .candy {

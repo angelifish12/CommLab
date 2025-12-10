@@ -224,7 +224,19 @@ function pillowPlaced() {
     let trees = document.querySelectorAll(".tree");
     trees.forEach(function (tree) {
         tree.style.display = "block";
+        tree.style.cursor = "pointer";
+        tree.addEventListener("click", function () {
+            tree.classList.add("shrinking");
+            setTimeout(function () {
+                tree.classList.remove("shrinking");
+            }, 500);
+        });
     });
+
+    let clouds = document.querySelectorAll(".cloud");
+    clouds.forEach(function (cloud) {
+        cloud.style.display = "block";
+    })
 
     let candies = document.querySelectorAll(".candy");
     candies.forEach(function (candy) {
