@@ -14,7 +14,7 @@
 
 
 <body class="bed">
-    <img class="info" src="assets/info.gif" style="display: none;" onclick="openCharacterOverlay()">
+    <img class="info" src="assets/info.gif" style="display: none;" onclick="openCharacter()">
     <div class="windowSize">
         <div class="pillowCase">
             <img class="pillow" src="assets/pillow.gif" style="cursor: grab;" draggable="true"
@@ -161,9 +161,9 @@
     <div class="windowSize"></div>
     <div class="tooth-box" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
 
-    <!-- Character overlay - hidden by default -->
+    <!-- Character page-->
     <div class="character" style="display: none;">
-        <button class="home-button" onclick="closeCharacterOverlay()">🦷</button>
+        <button class="home-button" onclick="closeCharacter()"><img src="assets/tooth (1).gif"></button>
         <h1>Characters</h1>
         <div class="character-box">
             <img class="fairy2" src="assets/character1.gif">

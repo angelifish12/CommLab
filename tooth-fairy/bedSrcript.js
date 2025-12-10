@@ -252,6 +252,7 @@ function pillowPlaced() {
     });
 
     let bgm = document.querySelector("#bgm");
+    bgm.loop = true;
     bgm.play();
 
     let info = document.querySelector(".info");
@@ -344,11 +345,11 @@ function dropFairyToOpen2(ev) {
     document.location = "magic.html";
 }
 
-function openCharacterOverlay() {
+function openCharacter() {
     document.querySelector(".character").style.display = "flex";
 }
 
-function closeCharacterOverlay() {
+function closeCharacter() {
     document.querySelector(".character").style.display = "none";
 }
 

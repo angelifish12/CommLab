@@ -88,6 +88,7 @@ function updateFalling() {
             sadTooth.src = "assets/jump.gif";
             stage = 2;
             let scream = document.querySelector("#scream");
+            scream.loop = true;
             scream.play();
         } else if (toothTop > 300 && stage == 2) {
             console.log("Changing to jumpp.gif");

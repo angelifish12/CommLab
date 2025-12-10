@@ -138,6 +138,7 @@ body.bed {
 
 .door {
     display: none;
+    cursor: not-allowed;
 }
 
 .open {
@@ -492,6 +493,10 @@ body.character {
 .home-button:hover {
     background-color: rgb(112, 204, 243);
     transform: scale(1.1);
+}
+
+.home-button img {
+    width: 50px;
 }
 
 .info {
