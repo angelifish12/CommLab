@@ -144,10 +144,52 @@ body.bed {
 
 .cloud {
     display: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: bottom;
+}
+
+.tree.shrinking {
+    animation: stretchh 0.5s ease-in-out;
+}
+
+@keyframes stretching {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(1.1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 .candy {
     display: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: bottom;
+}
+
+.candy.lifting {
+    animation: lift 0.5s ease-in-out;
+}
+
+@keyframes lift {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
 }
 
 .cappu {

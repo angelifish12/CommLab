@@ -238,12 +238,30 @@ function pillowPlaced() {
     let clouds = document.querySelectorAll(".cloud");
     clouds.forEach(function (cloud) {
         cloud.style.display = "block";
-    })
+        cloud.style.cursor = "pointer";
+        cloud.addEventListener("click", function () {
+            cloud.classList.add("stretching");
+            let lick = document.querySelector("#lick");
+            lick.play();
+            setTimeout(function () {
+                cloud.classList.remove("stretching");
+            }, 500);
+        });
+    });
 
     let candies = document.querySelectorAll(".candy");
     candies.forEach(function (candy) {
         candy.style.display = "block";
-    })
+        candy.style.cursor = "pointer";
+        candy.addEventListener("click", function () {
+            candy.classList.add("lifting");
+            let lick = document.querySelector("#lick");
+            lick.play();
+            setTimeout(function () {
+                candy.classList.remove("lifting");
+            }, 500);
+        });
+    });
 
     let cappus = document.querySelectorAll(".cappu");
     cappus.forEach(function (cappu) {
