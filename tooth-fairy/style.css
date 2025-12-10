@@ -149,11 +149,11 @@ body.bed {
     transform-origin: bottom;
 }
 
-.tree.shrinking {
+.cloud.stretching {
     animation: stretchh 0.5s ease-in-out;
 }
 
-@keyframes stretching {
+@keyframes stretchh {
     0% {
         transform: scaleX(1);
     }
