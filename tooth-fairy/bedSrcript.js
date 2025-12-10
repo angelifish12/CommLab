@@ -4,7 +4,7 @@ let ringPlayed = false;
 let phone3Clicked = false;
 let fairyMoving = false;
 let fairyStartScroll = 0;
-let fairyDropped = false; // track if fairy was dropped on the door
+let fairyDropped = false; // if fairy was dropped on the door
 
 function getScrollPercentageHorizontal() {
     let scrollLeft = document.documentElement.scrollLeft;
