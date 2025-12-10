@@ -125,7 +125,7 @@ window.addEventListener("scroll", function () {
             });
         }
 
-        // after phone3 clicked (no open2)
+        // after phone3 clicked
         if (phone3Clicked) {
             let phones = document.querySelectorAll(".phone");
             phones.forEach(function (phone) {
