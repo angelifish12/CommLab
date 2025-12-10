@@ -4,8 +4,7 @@ let ringPlayed = false;
 let phone3Clicked = false;
 let fairyMoving = false;
 let fairyStartScroll = 0;
-let fairyDropped = false; // if fairy was dropped
-
+let fairyDropped = false; // Track if fairy was dropped on left door
 
 function getScrollPercentageHorizontal() {
     let scrollLeft = document.documentElement.scrollLeft;
@@ -18,16 +17,17 @@ window.addEventListener("scroll", function () {
     let scrollSoFar = window.scrollX;
     let possibleScrollDistance = document.body.scrollWidth - window.innerHeight;
     let perc = scrollSoFar / possibleScrollDistance;
+
+    // snoring audio 
     let snoring = document.querySelector("#snoring");
-    if (snoring) {
-        if (perc < 0.1) { // first window
-            if (snoring.paused) {
-                snoring.play();
-            }
-        } else { // left first window
-            if (!snoring.paused) {
-                snoring.pause();
-            }
+    if (snoring && !snoring.paused) { // Only control if it's already playing
+        if (perc >= 0.1) { // Left first window
+            snoring.pause();
+        }
+    } else if (snoring && snoring.paused && perc < 0.1) {
+        // only resume if we're back in first window and it was playing before
+        if (snoring.currentTime > 0) { // Has been played before
+            snoring.play();
         }
     }
 
@@ -225,10 +225,6 @@ function dropHandler(ev) {
 
     let pillowCase = document.querySelector(".pillowCase");
     pillowCase.style.display = "none";
-    let snoring = document.querySelector("#snoring");
-    if (snoring) {
-        snoring.play();
-    }
 
     pillowPlaced();
 }
