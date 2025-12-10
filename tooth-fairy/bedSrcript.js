@@ -4,7 +4,7 @@ let ringPlayed = false;
 let phone3Clicked = false;
 let fairyMoving = false;
 let fairyStartScroll = 0;
-let fairyDropped = false; // Track if fairy was dropped on left door
+let fairyDropped = false; // track if fairy was dropped on the door
 
 function getScrollPercentageHorizontal() {
     let scrollLeft = document.documentElement.scrollLeft;
@@ -12,6 +12,20 @@ function getScrollPercentageHorizontal() {
     let perc = (scrollLeft / maxScroll) * 100;
     return perc;
 }
+
+window.addEventListener("load", function () {
+    let snoring = document.querySelector("#snoring");
+    if (snoring) {
+        snoring.loop = true;
+        snoring.play().catch(function (error) {
+            console.log("Audio autoplay blocked:", error);
+            document.body.addEventListener("click", function () {
+                snoring.play();
+            }, { once: true });
+            // https://stackoverflow.com/questions/72308661/promise-wont-catch-error-on-audio-failed-play
+        });
+    }
+});
 
 window.addEventListener("scroll", function () {
     let scrollSoFar = window.scrollX;
@@ -25,7 +39,7 @@ window.addEventListener("scroll", function () {
             snoring.pause();
         }
     } else if (snoring && snoring.paused && perc < 0.1) {
-        // only resume if we're back in first window and it was playing before
+        // only resume if back in first window and it was playing before
         if (snoring.currentTime > 0) { // has been played before
             snoring.play();
         }
@@ -40,7 +54,7 @@ window.addEventListener("scroll", function () {
         }
     }
 
-    // fairy move as user scrolls left
+    // fairy move as scrolls left
     if (fairyMoving && phone3Clicked) {
         let fairy = document.querySelector(".fairy");
         if (fairy) {
@@ -103,7 +117,7 @@ window.addEventListener("scroll", function () {
             });
         }
 
-        // hide fairy on right if already dropped
+        // hide fairy if already dropped
         if (fairyDropped) {
             let fairies = document.querySelectorAll(".fairy");
             fairies.forEach(function (fairy) {
@@ -164,7 +178,7 @@ window.addEventListener("scroll", function () {
 
         // Show open2 and fairy at pillow position if fairy was dropped
         if (fairyDropped) {
-            // Hide the original door/open
+            // hide the original door/open
             let doors = document.querySelectorAll(".door");
             doors.forEach(function (door) {
                 door.style.display = "none";
@@ -175,7 +189,7 @@ window.addEventListener("scroll", function () {
                 open.style.display = "none";
             });
 
-            // Show open2 at pillow
+            // show open2 at pillow
             let opens2 = document.querySelectorAll(".open2");
             opens2.forEach(function (open2) {
                 open2.style.display = "block";
@@ -184,7 +198,7 @@ window.addEventListener("scroll", function () {
             let chat = document.querySelector(".chat");
             chat.style.display = "block";
 
-            // Show fairy at pillow
+            // show fairy at pillow
             let fairyAtPillow = document.querySelector(".fairy-at-pillow");
             if (fairyAtPillow) {
                 fairyAtPillow.style.display = "block";
@@ -233,6 +247,12 @@ function pillowPlaced() {
     document.querySelector(".scroll-arrowsr").style.display = "block";
     document.body.style.overflowX = "scroll";
     document.body.style.overflowY = "hidden";
+
+    let snoring = document.querySelector("#snoring");
+    if (snoring) {
+        snoring.loop = true;
+        snoring.play();
+    }
 
     let trees = document.querySelectorAll(".tree");
     trees.forEach(function (tree) {
@@ -344,7 +364,7 @@ function dropFairy(ev) {
     ev.preventDefault();
     console.log("Fairy dropped on left door!");
 
-    fairyDropped = true; // Mark that fairy was dropped
+    fairyDropped = true; // fairy was dropped
 
     let fairy = document.querySelector(".fairy");
     if (fairy) {
