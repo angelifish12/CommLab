@@ -382,6 +382,10 @@ function dropFairy(ev) {
         birds2.forEach(function (bird1) {
             bird1.style.display = "none";
         });
+        let phones3 = document.querySelectorAll(".phone3");
+        phones3.forEach(function (phone3) {
+            phone3.style.display = "none";
+        });
     }
 
     let enter = document.querySelector("#enter");
