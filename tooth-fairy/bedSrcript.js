@@ -367,9 +367,8 @@ function ringg() {
 
 function dropFairy(ev) {
     ev.preventDefault();
-    console.log("Fairy dropped on left door!");
 
-    fairyDropped = true; // fairy was dropped
+    fairyDropped = true;
 
     let fairy = document.querySelector(".fairy");
     if (fairy) {
@@ -401,29 +400,53 @@ function dropFairy(ev) {
     let enter = document.querySelector("#enter");
     enter.play();
 
-    //  fairy at pillow
+    let clouds = document.querySelectorAll(".cloud");
+    clouds.forEach(function (cloud) {
+        cloud.addEventListener("mouseenter", function () {
+            let toothOnCloud = document.createElement("img");
+            toothOnCloud.src = "assets/tooth (2).gif";
+            toothOnCloud.className = "tooth-on-cloud";
+            toothOnCloud.style.position = "absolute";
+            toothOnCloud.style.width = "100px";
+            toothOnCloud.style.height = "auto";
+            toothOnCloud.style.zIndex = "150";
+            toothOnCloud.style.pointerEvents = "none";
+            // original cloud positions
+            toothOnCloud.style.left = cloud.style.left;
+            toothOnCloud.style.bottom = cloud.style.bottom;
+            document.body.append(toothOnCloud);
+            cloud.toothElement = toothOnCloud;
+        });
+
+        cloud.addEventListener("mouseleave", function () {
+            // remove text when mouse not on the cloud
+            if (cloud.toothElement) {
+                cloud.toothElement.remove();
+            }
+        });
+    });
+
+    // fairy at pillow
     let fairyAtPillow = document.createElement("img");
     fairyAtPillow.src = "assets/toothfairy.gif";
     fairyAtPillow.className = "fairy-at-pillow";
     fairyAtPillow.style.position = "absolute";
-    fairyAtPillow.style.left = "350px";
-    fairyAtPillow.style.top = "200px";
+    fairyAtPillow.style.left = "900px";
+    fairyAtPillow.style.top = "0px";
     fairyAtPillow.style.height = "200px";
     fairyAtPillow.style.width = "auto";
     fairyAtPillow.draggable = true;
     fairyAtPillow.style.cursor = "grab";
     fairyAtPillow.style.zIndex = "100";
-    fairyAtPillow.style.display = "none"; // hidden until scroll back
+    fairyAtPillow.style.display = "none";
     fairyAtPillow.addEventListener("dragstart", draggingStarted);
     fairyAtPillow.addEventListener("dragend", draggingEnded);
 
     let firstWindow = document.querySelector(".windowSize");
     firstWindow.append(fairyAtPillow);
 }
-
 function dropFairyToOpen2(ev) {
     ev.preventDefault();
-    console.log("Fairy dropped on open2 - going to magic!");
     document.location = "magic.html";
 }
 
