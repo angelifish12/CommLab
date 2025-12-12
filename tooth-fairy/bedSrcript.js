@@ -351,6 +351,11 @@ function ringg() {
     let birds = document.querySelectorAll(".bird");
     birds.forEach(function (bird) {
         bird.style.display = "block";
+        bird.style.cursor = "pointer";
+        bird.addEventListener("click", function () {
+            let birddd = document.querySelector("#birddd");
+            birddd.play();
+        })
     });
 
     let phones3 = document.querySelectorAll(".phone3");
@@ -373,6 +378,11 @@ function dropFairy(ev) {
         let birds = document.querySelectorAll(".bird2");
         birds.forEach(function (bird2) {
             bird2.style.display = "block";
+            bird2.style.cursor = "pointer";
+            bird2.addEventListener("click", function () {
+                let birddd = document.querySelector("#birddd");
+                birddd.play();
+            })
         });
 
         let chat = document.querySelector(".chat");

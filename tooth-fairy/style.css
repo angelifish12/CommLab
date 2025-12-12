@@ -238,6 +238,7 @@ body.bed {
     animation: flying 3s infinite;
     opacity: 0.7;
     width: 200px;
+    cursor: pointer;
 }
 
 .bird2 {
@@ -245,6 +246,7 @@ body.bed {
     animation: flying 3s infinite;
     opacity: 0.7;
     width: 200px;
+    cursor: pointer;
 }
 
 @keyframes flying {
