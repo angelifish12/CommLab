@@ -13,7 +13,7 @@ SEE MY RENDERED WORK [HERE](https://github.com/angelifish12/CommLab)
 * [ The Ugly Duckling](lorem)
 * [entropy](entropy)
 * [clock](clock)
-* [tooth fairy](tooth-fairy)
+* [When the Tooth Dropped](tooth-fairy)
 
 ⠀⢀⠤⡀⡀⣴⣶⣤⣶⣦⠀
 ⠀⢸⠀⠀⠀⠻⠿⠛⠿⠟⠀
