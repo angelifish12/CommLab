@@ -86,3 +86,12 @@ Building this taught me that web storytelling isn't just about writing a narrati
 I think the overall style is successful! The plot is simple, but the world still feels interactive and surprising. The part I would improve most is reliability and layout. Since I positioned many elements using absolute, the experience can change depending on screen size, which makes the site less accessible across devices. Also, because so much happens within one page with many cause-and-effect triggers, small errors are easy to happen. If I continue the project, I'd refactor the layout to be more responsive, simplify some dependencies between interactions, and make transitions smoother. I also think the story could expand with more backstory or additional small scenes that deepen the world.
 
 Feedback shaped the work constantly. I did user testing almost every day, and it was sometimes difficult to decide what to keep versus what to add. Different viewers often wanted different things. Still, that feedback clearly improved the project like it pushed me to add clearer guidance, like the character page and the bird instructions.
+## Credits & References
+- professor Leon & my fellow peers
+- https://stackoverflow.com/questions/72308661/promise-wont-catch-error-on-audio-failed-play
+- class slides
+- https://www.w3schools.com/howto/howto_js_draggable.asp
+- https://www.w3schools.com/cssref/pr_class_cursor.php
+- https://www.w3schools.com/Js/js_window.asp
+- https://www.w3schools.com/js/js_loop_for.asp
+- https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime
