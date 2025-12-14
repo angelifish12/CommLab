@@ -38,9 +38,35 @@ This structure lets the story feel like progressing through rooms, but still kee
 Even though the narrative is short, I wanted the world to feel interactive, so my CSS is built around:
 
 - Absolute positioning (especially in bed.html): because there are many layered elements on one long horizontal/scroll space, I used position: absolute to place objects precisely like stage props. 
+![position](assets/position.png) 
 
 - Visual hierarchy through scale + layering: foreground characters (z-index) and placed in clearer positions; background items are spaced randomly to form atmosphere and guide direction.
+![z-index](assets/zindex.png) 
 
 - Animation + transitions: I used many small animations to create a magical rhythm (floating, stretching)
+![stetch](assets/stretch.png) 
 
 - Interaction cues via cursor styles: I used cursor like cursor: pointer and cursor: grab to teach interaction without heavy instructions, so the user finds what can be clicked or dragged by hovering.
+## Technical: JS
+**What it does for the story**
+
+The Tooth Fairy's movement is a key storytelling moment: it makes the fairy feel alive. Instead of simply appearing at the destination, she travels with the viewer's scroll, which turns the user's navigation into a narrative force. It also creates surprise: the fairy slowly approaches Cappu and the doorway as the viewer continues exploring, like the world is responding to them.
+
+**How it works technically**
+
+This interaction is driven by state variables and a scroll event listener that updates the fairy's position.
+
+- Initial setup
+
+* The Tooth Fairy starts far to the right, using something like left: 960px as an initial value.
+
+- Narrative "cause" triggers the movement
+
+* I use a state like ringPlayed = true to indicate the "ring event" happened.
+
+*  That unlocks the next layer (like showing the bird), and then a further trigger happens when the user clicks phone3.
+
+- Click trigger sets movement mode
+
+* phone3Click() plays a murmur sound, sets phone3Clicked = true, turns fairyMoving = true, and stores the starting scroll position.
+![ring](assets/ring.png) 
