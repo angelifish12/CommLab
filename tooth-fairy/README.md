@@ -58,15 +58,31 @@ This interaction is driven by state variables and a scroll event listener that u
 
 - Initial setup
 
-* The Tooth Fairy starts far to the right, using something like left: 960px as an initial value.
+*  The Tooth Fairy starts far to the right, using something like left: 960px as an initial value.
 
 - Narrative "cause" triggers the movement
 
-* I use a state like ringPlayed = true to indicate the "ring event" happened.
+*  I use a state like ringPlayed = true to indicate the "ring event" happened.
 
 *  That unlocks the next layer (like showing the bird), and then a further trigger happens when the user clicks phone3.
 
 - Click trigger sets movement mode
 
-* phone3Click() plays a murmur sound, sets phone3Clicked = true, turns fairyMoving = true, and stores the starting scroll position.
+*  phone3Click() plays a murmur sound, sets phone3Clicked = true, turns fairyMoving = true, and stores the starting scroll position.
+- Scroll listener updates fairy position
+*  While the user scrolls, compute how far they've moved from the starting point.
+*  scrollDiff is the distance traveled by the user, and multiplying it by a ratio makes the fairy move at a controlled speed.
+- Arrival = state change
+*  When the fairy reaches the destination (near the Cappu/door area), it stops the motion (fairyMoving = false), lock the position, and then switch to draggable.
 ![ring](assets/ring.png) 
+![phone3](assets/phonepage.png) 
+![phone3](assets/phone3screen.png) 
+![scroll](assets/scroll.png) 
+## Reflection and Future Development
+From the beginning to the end, the concept and plot stayed consistent: a tooth drops, Cappu notices it, the Tooth Fairy is contacted, and the tooth becomes a coin. What changed the most was how the viewer experiences that story. Early on, I was inspired by the My Boyfriend Came Back From the War layout and wanted to use a split-screen structure to show two simultaneous sides of Cappu's world and the Tooth Fairy's world. But once I started testing it with other people, I realized the logic was hard to follow and the interactions became too limited, mostly reduced to clicking. That pushed me to redesign the second chapter into a horizontal scrolling journey, which ended up feeling more playful and more specific to the web as a medium.
+
+Building this taught me that web storytelling isn't just about writing a narrative but designing comprehension. Because the story progresses through user-triggered events, it's easy for viewers to miss what they’re "supposed" to do. Interaction cues are part of the narrative itself but I didn't want to over-explain everything and kill the sense of discovery, so the challenge became finding a balance between instruction and mystery.
+
+I think the overall style is successful! The plot is simple, but the world still feels interactive and surprising. The part I would improve most is reliability and layout. Since I positioned many elements using absolute, the experience can change depending on screen size, which makes the site less accessible across devices. Also, because so much happens within one page with many cause-and-effect triggers, small errors are easy to happen. If I continue the project, I'd refactor the layout to be more responsive, simplify some dependencies between interactions, and make transitions smoother. I also think the story could expand with more backstory or additional small scenes that deepen the world.
+
+Feedback shaped the work constantly. I did user testing almost every day, and it was sometimes difficult to decide what to keep versus what to add. Different viewers often wanted different things. Still, that feedback clearly improved the project like it pushed me to add clearer guidance, like the character page and the bird instructions.
