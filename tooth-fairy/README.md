@@ -95,3 +95,9 @@ Feedback shaped the work constantly. I did user testing almost every day, and it
 - https://www.w3schools.com/Js/js_window.asp
 - https://www.w3schools.com/js/js_loop_for.asp
 - https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime
+- https://www.w3schools.com/jsref/prop_style_overflow.asp
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/scale
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+- https://www.w3schools.com/JS/js_htmldom_css.asp
+- https://www.geeksforgeeks.org/javascript/javascript-window-location-and-document-location-objects/
+
